@@ -1,0 +1,74 @@
+/* 
+Colors are 6-variation limited 
+(to shift focus from color-theory back to design)
+*/
+
+/*
+Some colors don't use the full 6 variations, 
+assume the value you want to always be represented
+as '3', where the higher the value is the darker it 
+gets, and the lower the value the lighter it gets.
+*/
+$red-6		:	#4f0001;
+$red-5		:	#8a0001;
+$red-4		:	#be0001;
+$red-3		:	#ff0002;
+$red		:	#ff0002;
+$red-2		:	#ff4243;
+$red-1		:	#ff898a;
+$red-0		:	#ffc6c6;
+
+$blue-6		:	#00014F;
+$blue-5		:	#00018A;
+$blue-4		:	#0001BE;
+$blue-3		:	#0002FF;
+$blue		:	#0002FF;
+$blue-2		:	#4243FF;
+$blue-1		:	#898AFF;
+$blue-0		:	#C6C6FF;
+
+$green-6	:	#014F00;
+$green-5	:	#018A00;
+$green-4	:	#01BE00;
+$green-3	:	#00e700;
+$green		:	#00e700;
+$green-2	:	#43FF42;
+$green-1	:	#8AFF89;
+$green-0	:	#C6FFC6;
+
+$purple-6	:	#30005d;
+$purple-5	:	#50009b;
+$purple-4	:	#6900cc;
+$purple		:	#8708ff;
+$purple-2	:	#992cff;
+$purple-1	:	#c486ff;
+$purple-0	:	#e1c2ff;
+
+$orange-5	:	#bb7108;
+$orange-4	:	#d37e09;
+$orange		:	#e48500;
+$orange-2		:	#f69c1d;
+$orange-1		:	#ffac39;
+$orange-0		:	#ffc26d;
+
+$yellow		:	#fffc00;
+$yellow-0	:	#ffffcc;
+
+$cyan		:	#00FFFC;
+
+$magenta	:	#FC00FF;
+
+$black-5	:	#111;
+$black-4	:	#222;
+$black		:	#333;
+$black-2	: 	#555;
+
+$white-4	:	#FFF;
+$white		:	#EEE;
+$white-2	:	#DDD;
+
+$navy-6		:	#20395c;
+$navy-5		:	#294975;
+$navy-4		:	#31588d;
+$navy		:	#4276BD;
+$navy-2		:	#88a9d6;

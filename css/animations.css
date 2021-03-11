@@ -1,0 +1,12 @@
+/* 
+Colors are 6-variation limited 
+(to shift focus from color-theory back to design)
+*/
+/*
+Some colors don't use the full 6 variations, 
+assume the value you want to always be represented
+as '3', where the higher the value is the darker it 
+gets, and the lower the value the lighter it gets.
+*/
+/*https://codepen.io/devilishalchemist/pen/ZYLZay*/
+/*# sourceMappingURL=animations.css.map */

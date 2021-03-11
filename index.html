@@ -1,0 +1,250 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>The Cloud Fox</title>
+	<meta name="description" content="Free AWS Education for the Aspiring">
+	<meta name="author" content="Lucas Pichette">
+	<link rel="stylesheet" href="./css/style.css">
+	<script defer src="./js/all.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+	<div id="content">
+		<table>
+				<!-- Splash top row -->
+				<tr>
+					<div id="welcome-splash">
+						<h2 class="center-h">The Cloud Fox</h2>
+						<h1 class="center-h">AWS Handbook</h1>
+						<h5 class="center-h">A Guide for AWS Geeks</h5>
+						<h6 class="center-h">By <a href="https://lucaspichette.com">Lucas Pichette</a></h6>
+						<h6 class="center-h" style="font-size:12px"><a href="http://thecloudfox.com/"><em>Looking for the old version?</em></a></h6>
+					</div>
+				</tr>
+				<!-- Nav on separate row from book on mobile-->
+				<tr>
+					<!-- Index (mobile) -->
+					<div id="index-mobile">
+						<ul id="index-content">
+							<b id="index-title">Index</b>
+							<li class="primary">Intro to AWS</li>
+							<li><a href="#What-is-AWS?">0.0 What is AWS?</a></li>
+							<li><a href="#The-Outlook?">0.1 The Outlook?</a></li>
+						</ul>
+					</div>
+				</tr>
+				<!-- Nav and book are on same row for non-mobile-->
+				<tr style="height:100%;">
+					<!-- Index (non-mobile) -->
+					<td id="index-wrapper">
+						<div id="index">
+							<!-- Index Toggle -->
+							<div onclick="toggleIndex()" id="index-toggle">
+								<i id="hide-index" style="display:none" class="fas fa-angle-left"></i>
+								<i id="show-index" style="display:block" class="fas fa-angle-right"></i>
+							</div>
+							<!-- The actual index -->
+							<ul id="index-content">
+								<b id="index-title">Index</b>
+								<li class="primary">Intro to AWS</li>
+								<li><a href="#What-is-AWS?">0.0 What is AWS?</a></li>
+								<li><a href="#The-Outlook?">0.1 The Outlook?</a></li>
+							</ul>
+						</div>
+					</td>
+					<!-- Book -->
+					<td id="book" style="margin:auto">
+						<!-- 0: Introduction to AWS and Cloud -->
+						<section>
+							<h1>Introduction to AWS</h1>
+							<a href="What-is-AWS?" class="link-title"><h2 id="What-is-AWS?">0.0 What is AWS?<i class="fas fa-link link"></i></h2></a>
+							<hr style="transform:translate(0px, -10px)">
+							<p>
+								Amazon Web Services (AWS) is the globally-renown leader of cloud services. 
+								From startups to Fortune 500 companies, AWS has been powering technological 
+								advances internally and externally. With a pay-as-you-go model, ambition can soar 
+								more freely, as the weight of upfront-capital-expenses blockade can be shaken off.
+								<sup><abbr title="https://aws.amazon.com/what-is-aws/"><a href="https://aws.amazon.com/what-is-aws/">[1]</a></abbr></sup>
+							</p>
+							<a href="What-is-AWS?" class="link-title"><h2 id="Demand-for-AWS-Experts?">0.1 Demand for AWS Experts?<i class="fas fa-link link"></i></h2></a>
+							<hr style="transform:translate(0px, -10px)">
+							<p>
+								The job outlook for Information Technology (IT) is expected to increase by 11% from 2019 to 2029, which is much faster than 
+								the average for all occuprations. A lot of the demand for the new positions are even rooted in Cloud technology!
+								<sup><abbr title="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">[2]</a></abbr></sup>
+							</p>
+							<p>
+								Among the "15 most in-demand certifications for 2021", every single certification can be applied in the cloud industry, and 
+								one of these certifications even being an AWS certification: AWS Certified Solutions Architect - Professional.
+								<sup><abbr title="https://www.cio.com/article/3562331/top-15-it-certifications-in-demand-for-2021.html">[3]</a></abbr></sup>
+							</p>
+							<div class="quiz">
+								<table>
+										<!-- Question -->
+										<tr id="c0-qr" class="question-row" style="filter:blur(4px)">
+											<td>
+												<div id="Q-icon">Q<span id="q-title-num"></span></div>
+												<p id="c0-q" class="question">Question</p>
+											</td>
+										</tr>
+										<!-- Options -->
+										<tr id="c0-or" class="options-row" style="filter:blur(4px)">
+											<td>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o1" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o2" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o3" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o4" class="option">Option</p>
+												</div>
+											</td>
+										</tr>
+										<!-- Buttons (prev, refresh, next ... check)-->
+										<tr class="buttons-row">
+											<td>
+												<table>
+													<tr>
+														<td class="quiz-btns">
+															<div class="change-page-btn-left">
+																<i class="fas fa-arrow-left"></i>
+															</div>
+															
+															<div class="change-page-btn-right">
+																<i class="fas fa-arrow-right"></i>
+															</div>
+														</td>
+														<td class="quiz-display">
+															<div id="c0-sb" class="status-btn" onclick="loadQuiz(0)">
+																START
+															</div>
+														</td>
+														<td class="quiz-check-btn" onclick="checkAnswer(0)">
+															<i class="fas fa-check check-btn"></i>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+								</table>	
+							</div>
+						</section>	
+
+						<!-- (-1): EXAMPLE SECTION (doesn't show up)-->
+						<section style="display:none">
+							<h1>About Examples</h1>
+							<h2 id="Example!">Example!</h2>
+							<p>This is <span class="important sketch-highlight">important</span> yo</p>
+							<div class="code">
+								<ol>
+									<li><span class="f">myfunction</span>();</li>
+									<li><span class="t">int</span> myvar <span class="o">=</span> <span class="n">7</span>;</li>
+								</ol>
+							</div>
+							<p>This is <span class="important sketch-highlight">important</span> yo</p>
+							<div class="quiz">
+								<table>
+									<tbody>
+										<!-- Question -->
+										<tr id="c0-qr" class="question-row" style="filter:blur(4px)">
+											<td>
+												<div id="Q-icon">Q<span id="q-title-num"></span></div>
+												<p id="c0-q" class="question">Question</p>
+											</td>
+										</tr>
+										<!-- Options -->
+										<tr id="c0-or" class="options-row" style="filter:blur(4px)">
+											<td>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o1" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o2" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o3" class="option">Option</p>
+												</div>
+												<div class="option-wrapper">
+													<div class="userSelectQ-wrapper">
+														<i class="fas fa-square userSelectQ"></i>
+														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													</div>
+													<p id="c0-o4" class="option">Option</p>
+												</div>
+											</td>
+										</tr>
+										<!-- Buttons (prev, refresh, next ... check)-->
+										<tr class="buttons-row">
+											<td>
+												<table>
+													<tr>
+														<td class="quiz-btns">
+															<div class="change-page-btn-left">
+																<i class="fas fa-arrow-left"></i>
+															</div>
+															
+															<div class="change-page-btn-right">
+																<i class="fas fa-arrow-right"></i>
+															</div>
+														</td>
+														<td class="quiz-display">
+															<div id="c0-sb" class="status-btn" onclick="loadQuiz(0)">
+																START
+															</div>
+														</td>
+														<td class="quiz-check-btn" onclick="checkAnswer(0)">
+															<i class="fas fa-check check-btn"></i>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</section>
+					</td>
+					
+				</tr>
+		</table>
+		<script src="./js/script.js"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,510 @@
+@import "foundation";
+@import "colors";
+@import "utilities";
+@import "animations.scss";
+
+/* Customizing basic tags */
+html{
+	background-color:#EEE;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1{
+	@extend %margin-t-25;
+	@extend %margin-b-45;
+	font-size:42px;
+}
+h2{
+	@extend %margin-t-25;
+	@extend %margin-b-5;
+}
+h5{
+	font-size:22px;
+	font-weight:normal;
+}
+
+h6{
+	@extend %margin-t-10;
+	@extend %margin-b-10;
+	font-weight:normal;
+	font-size:18px;
+}
+
+section > h1{
+	font-size:28px;
+	color:$blue-2;
+	margin-bottom:35px;
+}
+
+section > h2{
+	font-size:24px;
+}
+
+table{
+	height:500px;
+	padding:0;
+}
+
+a{
+	//background-color:green;
+	color: $black;
+	@extend %ul-anim-1;
+}
+
+li{
+	padding-bottom:1px;
+}
+
+.quiz > table > tbody > tr > td{
+	padding: 10px;
+}
+
+sup{
+	& > * > *{
+		color:$orange-2;
+	}
+	
+	& > *:hover > *{
+		color:$orange-2;
+	}
+}
+
+.link{
+	display:inline;
+	font-size:14px;
+	position:absolute;
+	bottom:13px;
+	margin-left:15px;
+}
+
+a.link-title{
+	& > h2 > *{
+		color:#999;
+	}
+	&:hover > h2 > *{
+		color:#111;
+	}
+}
+
+table{
+	border-collapse: collapse;
+	width:100%;
+}
+
+tr{
+	width:100%;
+}
+
+/* Specifying modular classes */
+
+.center {
+	&{
+		display:flex;
+		align-items: center;
+	}
+	&-h{
+		text-align: center;
+	}
+}
+
+.important {
+	font-weight:bold;
+	@extend %highlight-y;
+}
+
+.code {
+	& {
+		font-family: 'Courier New', monospace;
+		background-color:$black-4;
+		border-radius:5px;
+		padding:10px;
+		width:75%;
+		margin-left:auto;
+		margin-right:auto;
+	}	
+	& > ol{
+		color:white;
+	}
+	& > ol > li > .f{
+		/*Function syntax highlighting*/
+		color:$navy-2;
+	}
+	& > ol > li > .t{
+		/*Type syntax highlighting*/
+		color: #ee8000;
+		font-weight:bolder;
+	}
+	& > ol > li > .s{
+		/*String syntax highlighting*/
+		color: #0c9500;
+	}
+	& > ol > li > .o{
+		/*Operator syntax highlighting*/
+		color: #ee8000;
+	}
+	& > ol > li > .n{
+		/* Number syntax highlighting*/
+		color:$blue-1;
+	}
+}
+
+/* Specific component styling */
+
+#welcome-splash{
+	height:300px;
+
+	display:block;
+	position:relative;
+	background-size: 100px auto;
+	/* Easiest solution is to change opacity of image  */
+	background-image:url("../img/115804.png");
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#index-content{
+	padding:0;
+
+	@include desktop{
+		width:170px;
+	}
+	@include laptop{
+		width:170px;
+	}
+	& > *{
+		display:block;
+	}
+}
+
+b#index-title {
+	display:block;
+	float:initial;
+	margin-bottom:5px;
+	font-size:20px;
+}
+
+#index-toggle{
+	/*needs to have same height and width as actual button*/
+	width:20px;
+	height:36px;
+	display:block;
+
+	/* Same height as welcome-splash + height/font-size of h1*/
+	/* 400px + 28px*/
+
+	float:right;
+	font-size:36px;
+	color:#777;
+	&:hover{
+		color: #111;
+	}
+}
+
+#index-wrapper{
+	display:inline-block;
+
+	height:500px;
+	/* Needs to be width of index-content-td + index-toggle*/
+	width:200px;
+	height:100%;
+	position:relative;
+	top:0;
+	left:-25px;
+
+	/* provides automatic scroll-bar behavior*/
+	//overflow-y:scroll;
+
+	/*should automatically be not-displayed upon smaller device 
+	due to parent management*/
+}
+
+#index{
+	vertical-align: top;
+
+	height:500px;
+	width:200px;
+
+	position:sticky;
+	top:50px;
+
+	/* provides automatic scroll-bar behavior*/
+}
+
+#index-mobile{
+	display:none;
+	@include tablet{
+		display:block;
+	}
+	@include mobile{
+		display:block;
+	}
+}
+
+#book{
+	padding-left:20px;
+	height:100%;
+	@include desktop{
+		/* content width - index-wrapper width - book padding */
+		/* 1200 - 202 - 20 */
+		width:878px;
+		margin-left:auto;
+		margin-right:auto;
+		display: inline-block;
+	}
+	@include laptop{
+		/* content width - index-wrapper width - book padding */
+		/* 1000 - 202 - 20 */
+		width:678px;
+		margin-left:auto;
+		margin-right:auto;
+		display: inline-block;
+	}
+	@include tablet{
+		width:90%;
+		display: block;
+	}
+	@include mobile{
+		width:90%;
+		display: block;
+	}
+}
+
+#content{
+	position:relative;
+	@include desktop{
+		width:1200px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	@include laptop{
+		width:1000px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	@include tablet{
+		width:600px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	@include mobile{
+		width:90%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+
+li.primary{
+	color:$blue-2;
+	font-weight:600;
+}
+
+/* Temporary, planned to add later */
+.quiz{
+	position:relative;
+	display:block;
+	@include tablet{
+		display:none;
+	}
+	@include mobile{
+		display:none;
+	}
+}
+
+.quiz > table{
+	margin-top:50px;
+	margin-bottom:100px;
+	width:100%;
+	height:400px;
+	border-spacing: 0px;
+	border-collapse: separate;
+
+	border-top:1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+}
+
+.question{
+	margin:0;
+	margin-left:42px;
+	top:0;
+	padding:0;
+}
+
+#q-title-num{
+	font-size:12px;
+}
+
+.question-row{
+	height:25%;
+	& > * {
+		position:relative;
+	}
+	vertical-align: top;
+}
+.question-row:after{
+	content:'';
+	display:block;
+	margin-left:25%;
+	width:50%;
+}
+.options-row{
+	height:60%;
+}
+.buttons-row{
+	height:15%;
+	padding:0;
+	margin:0;
+	& > td > table{
+		border-spacing: 0px;
+    	border-collapse: separate;
+		width:100%;
+		height:100%;
+	}
+}
+
+.quiz-btns{
+	width:20%;
+	user-select:none;
+	margin-right:5%;
+}
+.quiz-display{
+	width:55%;
+	user-select:none;
+	& > .status-btn{
+		width:70%;
+		margin-left:15%;
+		text-align:center;
+		color:$navy-5;
+	}
+	& > .status-btn:hover{
+		width:70%;
+		margin-left:15%;
+		text-align:center;
+		color:$navy;
+	}
+}
+.quiz-check-btn{
+	width:20%;
+	user-select:none;
+}
+
+.quiz-check-btn:hover > *{
+	color:$green-4;
+}
+
+#Q-icon{
+	position:absolute;
+	top:0px;
+	left:5px;
+	font-size:32px;
+	font-style: italic;
+}
+
+.check-btn{
+	display:flex;
+	align-self:center;
+	margin:auto;
+	color:$green-5;
+}
+
+.change-page-btn{
+	
+	&-left{
+		height:100%;
+		width:65px;
+		text-align:center;
+		// Already has 10px padding
+		color:$purple-6;
+		float:left;
+		margin-left:5px;
+		&:hover{
+			color: $purple;
+		}
+	}
+	&-right{
+		height:100%;
+		width:65px;
+		text-align:center;
+
+		color:$purple-6;
+		margin-right:5px;
+		float:right;
+		&:hover{
+			color: $purple;
+		}
+	}
+}
+
+.userSelectQ-wrapper{
+	position:relative;
+	display:inline-block;
+	width:22px;
+	height:22px;
+}
+
+.userSelectQ{
+	display:block;
+	position:relative;
+	margin:auto;
+	font-size:22px;
+	&-check{
+		position:absolute;
+		top:3px;
+		left:5px;
+	}
+}
+
+.option-wrapper{
+	height:40px;
+	margin-bottom:10px;
+	& > p{
+		display:inline-block;
+		vertical-align: top;
+		line-height:22px;
+		margin:0;
+		padding-left:10px;
+	}
+}
+
+/*https://medium.com/@codingdudecom/highlight-text-css-97331a5b71b5*/
+.sketch-highlight{
+	padding-left:2px;
+	padding-right:4px;
+	position:relative;
+  }.sketch-highlight:before{
+	content:"";
+	z-index:-1;
+	left:-.1em;
+	top:.1em;
+	border-width:2px;
+	border-style:solid;
+	border-color:$orange;
+	position:absolute;
+	border-right-color:transparent;
+	width:100%;
+	height:1.2em;
+	transform:rotate(2deg);
+	opacity:0.5;
+	border-radius:0.25em;
+  }.sketch-highlight:after{
+	content:"";
+	z-index:-1;
+	left:-.2em;
+	top:.2em;
+	border-width:2px;
+	border-style:solid;
+	border-color:$orange-5;
+	border-left-color:transparent;
+	border-top-color:transparent;
+	position:absolute;
+	width:100%;
+	height:1.2em;
+	transform:rotate(-1deg);
+	opacity:0.5;
+	border-radius:0.25em;
+}
+
+/* Page-specific styling */
+.sb-thin{
+	scrollbar-color: auto;
+	scrollbar-width: thin;
+}
