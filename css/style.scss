@@ -164,6 +164,7 @@ tr{
 
 #index-content{
 	padding:0;
+	margin:0;
 
 	@include desktop{
 		width:170px;
@@ -173,6 +174,8 @@ tr{
 	}
 	& > *{
 		display:block;
+		list-style: none;
+		padding-left:0;
 	}
 }
 
@@ -192,7 +195,6 @@ b#index-title {
 	/* Same height as welcome-splash + height/font-size of h1*/
 	/* 400px + 28px*/
 
-	float:right;
 	font-size:36px;
 	color:#777;
 	&:hover{
@@ -300,6 +302,7 @@ li.primary{
 
 /* Temporary, planned to add later */
 .quiz{
+	user-select:none;
 	position:relative;
 	display:block;
 	@include tablet{

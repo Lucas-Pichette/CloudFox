@@ -30,8 +30,8 @@
 				<tr>
 					<!-- Index (mobile) -->
 					<div id="index-mobile">
-						<ul id="index-content">
-							<b id="index-title">Index</b>
+						<ul id="index-content-mobile">
+							<b id="index-title-mobile">Index</b>
 							<li class="primary">Intro to AWS</li>
 							<li><a href="#What-is-AWS?">0.0 What is AWS?</a></li>
 							<li><a href="#The-Outlook?">0.1 The Outlook?</a></li>
@@ -44,17 +44,19 @@
 					<td id="index-wrapper">
 						<div id="index">
 							<!-- Index Toggle -->
-							<div onclick="toggleIndex()" id="index-toggle">
+							<div onclick="toggleIndex()" id="index-toggle" style="float:left;">
 								<i id="hide-index" style="display:none" class="fas fa-angle-left"></i>
-								<i id="show-index" style="display:block" class="fas fa-angle-right"></i>
+								<i id="show-index" style="display:inline-block" class="fas fa-angle-right"></i>
 							</div>
 							<!-- The actual index -->
-							<ul id="index-content">
-								<b id="index-title">Index</b>
-								<li class="primary">Intro to AWS</li>
-								<li><a href="#What-is-AWS?">0.0 What is AWS?</a></li>
-								<li><a href="#The-Outlook?">0.1 The Outlook?</a></li>
-							</ul>
+							<div id="index-content" style="display:none">
+								<ul>
+									<b id="index-title">Index</b>
+									<li class="primary">Intro to AWS</li>
+									<li><a href="#What-is-AWS?">0.0 What is AWS?</a></li>
+									<li><a href="#The-Outlook?">0.1 The Outlook?</a></li>
+								</ul>
+							</div>
 						</div>
 					</td>
 					<!-- Book -->
@@ -88,7 +90,7 @@
 										<!-- Question -->
 										<tr id="c0-qr" class="question-row" style="filter:blur(4px)">
 											<td>
-												<div id="Q-icon">Q<span id="q-title-num"></span></div>
+												<div id="Q-icon">Q<span id="q-title-num">1</span></div>
 												<p id="c0-q" class="question">Question</p>
 											</td>
 										</tr>
@@ -96,30 +98,30 @@
 										<tr id="c0-or" class="options-row" style="filter:blur(4px)">
 											<td>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
+													<div class="userSelectQ-wrapper" onclick="selectOption(0,1)">
 														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i id="c0-o1-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
 													</div>
 													<p id="c0-o1" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
+													<div class="userSelectQ-wrapper" onclick="selectOption(0,2)">
 														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i id="c0-o2-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
 													</div>
 													<p id="c0-o2" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
+													<div class="userSelectQ-wrapper" onclick="selectOption(0,3)">
 														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i id="c0-o3-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
 													</div>
 													<p id="c0-o3" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
+													<div class="userSelectQ-wrapper" onclick="selectOption(0,4)">
 														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i id="c0-o4-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
 													</div>
 													<p id="c0-o4" class="option">Option</p>
 												</div>
@@ -131,11 +133,11 @@
 												<table>
 													<tr>
 														<td class="quiz-btns">
-															<div class="change-page-btn-left">
+															<div class="change-page-btn-left" onclick="changeQuestion(0,-1)">
 																<i class="fas fa-arrow-left"></i>
 															</div>
 															
-															<div class="change-page-btn-right">
+															<div class="change-page-btn-right" onclick="changeQuestion(0,1)">
 																<i class="fas fa-arrow-right"></i>
 															</div>
 														</td>

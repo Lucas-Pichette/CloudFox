@@ -271,6 +271,7 @@ tr {
 
 #index-content {
   padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 1351px) {
@@ -287,6 +288,8 @@ tr {
 
 #index-content > * {
   display: block;
+  list-style: none;
+  padding-left: 0;
 }
 
 b#index-title {
@@ -303,7 +306,6 @@ b#index-title {
   display: block;
   /* Same height as welcome-splash + height/font-size of h1*/
   /* 400px + 28px*/
-  float: right;
   font-size: 36px;
   color: #777;
 }
@@ -436,6 +438,10 @@ li.primary {
 
 /* Temporary, planned to add later */
 .quiz {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   display: block;
 }
