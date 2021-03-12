@@ -13,12 +13,10 @@ function toggleIndex(){
 		indexContent.style.display = "inline-block";
 		showBtn.style.display = "none";
 		hideBtn.style.display = "inline-block";
-		toggleBtn.style.float = "right";
 	} else{
 		indexContent.style.display = "none";
 		showBtn.style.display = "inline-block";
 		hideBtn.style.display = "none";
-		toggleBtn.style.float = "left";
 	}
 }
 
