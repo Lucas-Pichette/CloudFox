@@ -196,7 +196,7 @@ tr{
 	}
 }
 
-b#index-title {
+b.index-title {
 	display:block;
 	float:initial;
 	margin-bottom:5px;
@@ -250,6 +250,14 @@ b#index-title {
 }
 
 #index{
+	&-mobile{
+		padding-left:40px;
+		margin:0;
+		& > ul{
+			padding-left: 20px;
+		}
+	}
+
 	vertical-align: top;
 
 	height:500px;

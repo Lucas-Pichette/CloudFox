@@ -306,7 +306,7 @@ tr {
   padding-left: 0;
 }
 
-b#index-title {
+b.index-title {
   display: block;
   float: initial;
   margin-bottom: 5px;
@@ -368,6 +368,15 @@ b#index-title {
   position: sticky;
   top: 50px;
   /* provides automatic scroll-bar behavior*/
+}
+
+#index-mobile {
+  padding-left: 40px;
+  margin: 0;
+}
+
+#index-mobile > ul {
+  padding-left: 20px;
 }
 
 #index-mobile {
