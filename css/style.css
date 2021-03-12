@@ -198,14 +198,6 @@ sup > *:hover > * {
   color: #f69c1d;
 }
 
-.link {
-  display: inline;
-  font-size: 14px;
-  position: absolute;
-  bottom: 13px;
-  margin-left: 15px;
-}
-
 a.link-title > h2 > * {
   color: #999;
 }
@@ -224,6 +216,14 @@ tr {
 }
 
 /* Specifying modular classes */
+.link {
+  display: inline;
+  font-size: 14px;
+  position: absolute;
+  bottom: 13px;
+  margin-left: 15px;
+}
+
 .center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,9 +288,11 @@ tr {
   position: relative;
   background-size: 100px auto;
   /* Easiest solution is to change opacity of image  */
-  background-image: url("../img/115804.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  /*
+	background-image:url("../img/115804.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	*/
 }
 
 #index-content {
