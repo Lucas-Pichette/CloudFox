@@ -24,7 +24,7 @@ function toggleIndex(){
 const questions = [
 	[
 		{
-			"question": "Which of these principles is among the AWS Leadership Principles?",
+			"question": "Which of these principle(s) is among the AWS Leadership Principles?",
 			"options": [
 				"Customer Obsession",
 				"Ownership",
@@ -38,27 +38,51 @@ const questions = [
 			]
 		},
 		{
-			"question": "question 2",
+			"question": "Which of these is <b>not</b> one of the 5 Pillars of the AWS Well-Architected Framework?",
 			"options": [
-				"o1 for q2",
-				"o2 for q2",
-				"o3 for q2",
-				"o4 for q2"
+				"Security",
+				"Reliability",
+				"Scalability",
+				"Performance Efficiency"
+			],
+			"ansid": [
+				3
+			]
+		},
+		{
+			"question": "Which pillar does the following descriptor best fit into? \"Stop guessing capacity\"",
+			"options": [
+				"Reliability",
+				"Performance Efficiency",
+				"Scalability",
+				"Operational Excellence"
 			],
 			"ansid": [
 				1
 			]
 		},
 		{
-			"question": "question 3",
+			"question": "Which pillar does the following descriptor best fit into? \"Make frequent, small, reversible changes\"",
 			"options": [
-				"o1 for q3",
-				"o2 for q3",
-				"o3 for q3",
-				"o4 for q3"
+				"Security",
+				"Operational Excellence",
+				"Performance Efficiency",
+				"Reliability"
 			],
 			"ansid": [
 				1
+			]
+		},
+		{
+			"question": "Which pillar does the following descriptor best fit into? \"Experiment more often\"",
+			"options": [
+				"Security",
+				"Operational Excellence",
+				"Reliability",
+				"Performance Efficiency"
+			],
+			"ansid": [
+				4
 			]
 		}
 	],
