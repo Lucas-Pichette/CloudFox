@@ -220,6 +220,9 @@ b#index-title {
 	&:hover{
 		color: #111;
 	}
+	& > *{
+		cursor:pointer;
+	}
 }
 
 #index-wrapper{
@@ -399,25 +402,24 @@ b#index-title {
 	width:55%;
 	user-select:none;
 	& > .status-btn{
+		cursor:pointer;
 		width:70%;
 		margin-left:15%;
 		text-align:center;
-		color:$navy-5;
+		color:$red-6;
 	}
 	& > .status-btn:hover{
 		width:70%;
 		margin-left:15%;
 		text-align:center;
-		color:$navy;
+		color:$red-4;
 	}
 }
 .quiz-check-btn{
 	width:20%;
 	user-select:none;
-}
-
-.quiz-check-btn:hover > *{
-	color:$green-4;
+	border-radius:5px;
+	cursor:pointer;
 }
 
 #Q-icon{
@@ -428,16 +430,15 @@ b#index-title {
 	font-style: italic;
 }
 
-.check-btn{
+#check-btn{
 	display:flex;
 	align-self:center;
 	margin:auto;
-	color:$green-5;
 }
 
 .change-page-btn{
-	
 	&-left{
+		cursor:pointer;
 		height:100%;
 		width:65px;
 		text-align:center;
@@ -450,6 +451,7 @@ b#index-title {
 		}
 	}
 	&-right{
+		cursor:pointer;
 		height:100%;
 		width:65px;
 		text-align:center;
@@ -468,6 +470,7 @@ b#index-title {
 	display:inline-block;
 	width:22px;
 	height:22px;
+	cursor:pointer;
 }
 
 .userSelectQ{
@@ -476,6 +479,7 @@ b#index-title {
 	margin:auto;
 	font-size:22px;
 	&-check{
+		color: $orange;
 		position:absolute;
 		top:3px;
 		left:5px;

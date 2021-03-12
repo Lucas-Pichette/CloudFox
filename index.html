@@ -241,40 +241,40 @@
 							<div class="quiz">
 								<table>
 										<!-- Question -->
-										<tr id="c0-qr" class="question-row" style="filter:blur(4px)">
+										<tr id="c0-qr" class="question-row" style="filter:blur(4px);">
 											<td>
 												<div id="Q-icon">Q<span id="q-title-num">1</span></div>
 												<p id="c0-q" class="question">Question</p>
 											</td>
 										</tr>
 										<!-- Options -->
-										<tr id="c0-or" class="options-row" style="filter:blur(4px)">
+										<tr id="c0-or" class="options-row" style="filter:blur(4px);">
 											<td>
 												<div class="option-wrapper">
 													<div class="userSelectQ-wrapper" onclick="selectOption(0,1)">
-														<i class="fas fa-square userSelectQ"></i>
-														<i id="c0-o1-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c0-o1-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
 													<p id="c0-o1" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
 													<div class="userSelectQ-wrapper" onclick="selectOption(0,2)">
-														<i class="fas fa-square userSelectQ"></i>
-														<i id="c0-o2-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c0-o2-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
 													<p id="c0-o2" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
 													<div class="userSelectQ-wrapper" onclick="selectOption(0,3)">
-														<i class="fas fa-square userSelectQ"></i>
-														<i id="c0-o3-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c0-o3-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
 													<p id="c0-o3" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
 													<div class="userSelectQ-wrapper" onclick="selectOption(0,4)">
-														<i class="fas fa-square userSelectQ"></i>
-														<i id="c0-o4-c" class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c0-o4-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
 													<p id="c0-o4" class="option">Option</p>
 												</div>
@@ -299,8 +299,8 @@
 																START
 															</div>
 														</td>
-														<td class="quiz-check-btn" onclick="checkAnswer(0)">
-															<i class="fas fa-check check-btn"></i>
+														<td id="check-btn-box" class="quiz-check-btn" onclick="checkAnswer(0)" onmouseover="chkBtnHighlight(0)" onmouseout="chkBtnUnhighlight(0)">
+															<i id="check-btn" class="fas fa-check" style="color:rgb(0, 58, 0)"></i>
 														</td>
 													</tr>
 												</table>
