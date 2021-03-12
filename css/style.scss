@@ -5,7 +5,7 @@
 
 /* Customizing basic tags */
 html{
-	background-color:#EEE;
+	background-color:rgb(243, 243, 243);
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -33,11 +33,21 @@ h6{
 section > h1{
 	font-size:28px;
 	color:$blue-2;
-	margin-bottom:35px;
+	margin-bottom:45px;
 }
 
-section > h2{
-	font-size:24px;
+section > a > h2{
+	margin-top:35px;
+	font-size:22px;
+}
+section > a > .first{
+	margin-top:0px;
+}
+
+section > h3{
+	font-size:20px;
+	margin-bottom:0;
+	font-weight:bold;
 }
 
 table{
@@ -49,6 +59,18 @@ a{
 	//background-color:green;
 	color: $black;
 	@extend %ul-anim-1;
+}
+
+ul{ 
+	margin-top:5px;
+	list-style: none; 
+}
+
+ul li:before{ 
+	color:$black;
+	/* Space after dot is actually unicode. ' ' */
+	content:"• "; 
+	font-size:10pt; 
 }
 
 li{
@@ -166,12 +188,6 @@ tr{
 	padding:0;
 	margin:0;
 
-	@include desktop{
-		width:170px;
-	}
-	@include laptop{
-		width:170px;
-	}
 	& > *{
 		display:block;
 		list-style: none;
@@ -188,6 +204,7 @@ b#index-title {
 
 #index-toggle{
 	float:right;
+	margin-right:10px;
 
 	/*needs to have same height and width as actual button*/
 	width:20px;
@@ -226,7 +243,7 @@ b#index-title {
 	vertical-align: top;
 
 	height:500px;
-	width:200px;
+	width:250px;
 
 	position:sticky;
 	top:50px;
@@ -245,12 +262,12 @@ b#index-title {
 }
 
 #book{
-	padding-left:20px;
+	padding-left:40px;
 	height:100%;
 	@include desktop{
-		/* content width - index-wrapper width - book padding */
-		/* 1200 - 202 - 20 */
-		width:878px;
+		/* content width - index-wrapper width - book padding - 50? */
+		/* 1200 - 302 - 20 - 50 */
+		width:828px;
 		margin-left:auto;
 		margin-right:auto;
 		display: inline-block;
@@ -297,7 +314,7 @@ b#index-title {
 	}
 }
 
-li.primary{
+.primary{
 	color:$blue-2;
 	font-weight:600;
 }
