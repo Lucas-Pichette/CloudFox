@@ -64,6 +64,7 @@ a{
 ul{ 
 	margin-top:5px;
 	list-style: none; 
+	padding-left:25px;
 }
 
 ul li:before{ 
@@ -170,6 +171,16 @@ tr{
 }
 
 /* Specific component styling */
+
+#index-content > ul {
+	margin-top:3px;
+	margin-bottom:10px;
+}
+
+.list-title{
+	margin-bottom:5px;
+	font-weight:bold;
+}
 
 #welcome-splash{
 	height:300px;
@@ -333,6 +344,7 @@ b.index-title {
 }
 
 .primary{
+	margin-top:0;
 	color:$blue-2;
 	font-weight:600;
 }
