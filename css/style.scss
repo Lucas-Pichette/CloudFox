@@ -237,6 +237,12 @@ b#index-title {
 
 	/*should automatically be not-displayed upon smaller device 
 	due to parent management*/
+	@include mobile{
+		display:none;
+	}
+	@include tablet{
+		display:none;
+	}
 }
 
 #index{

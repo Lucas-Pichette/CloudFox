@@ -342,6 +342,18 @@ b#index-title {
 	due to parent management*/
 }
 
+@media screen and (max-width: 767px) {
+  #index-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+  #index-wrapper {
+    display: none;
+  }
+}
+
 #index {
   vertical-align: top;
   height: 500px;
