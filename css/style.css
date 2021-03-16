@@ -628,7 +628,7 @@ b.index-title {
 .change-page-btn-left {
   cursor: pointer;
   height: 100%;
-  width: 65px;
+  width: 60px;
   text-align: center;
   color: #30005d;
   float: left;
@@ -642,7 +642,7 @@ b.index-title {
 .change-page-btn-right {
   cursor: pointer;
   height: 100%;
-  width: 65px;
+  width: 60px;
   text-align: center;
   color: #30005d;
   margin-right: 5px;
