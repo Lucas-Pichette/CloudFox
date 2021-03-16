@@ -50,6 +50,11 @@
 						<b class="primary">Fund. AWS Resources</b>
 						<ul>
 							<li><a href="#S3"><b>1.1</b> S3</a></li>
+							<li><a href="#EC2"><b>1.2</b> EC2</a></li>
+						</ul>
+						<b class="primary">AWS Resources In-Depth</b>
+						<ul>
+							<li><a href="#S3-in-depth"><b>2.1</b> S3</a></li>
 						</ul>
 					</div>
 				</tr>
@@ -76,6 +81,11 @@
 								<b class="primary">Fund. AWS Resources</b>
 								<ul>
 									<li><a href="#S3"><b>1.1</b> S3</a></li>
+									<li><a href="#EC2"><b>1.2</b> EC2</a></li>
+								</ul>
+								<b class="primary">AWS Resources In-Depth</b>
+								<ul>
+									<li><a href="#S3-in-depth"><b>2.1</b> S3</a></li>
 								</ul>
 							</div>
 						</div>
@@ -373,6 +383,8 @@
 							<a href="#S3" class="link-title first"><h2 id="S3">1.1 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
+								<span class="important">Object storage; 11 9's durability;Multi-AZ</span><br>
+								<p class="list-title">Amazon's description of S3</p>
 								<p>
 									Simple Storage Service (S3) is designed for 
 									customers of all sizes and industries can use it to 
@@ -380,6 +392,7 @@
 									use cases, such as data lakes, websites, mobile 
 									applications, backup and restore, archive, enterprise 
 									applications, IoT devices, and big data analytics
+									<sup><abbr title="https://aws.amazon.com/s3/"><a href="https://aws.amazon.com/s3/">[6]</a></abbr></sup>
 								</p>
 								<p class="list-title">S3 at a Glance:</p>
 								<ul>
@@ -387,7 +400,117 @@
 									<li>Object-based storage</li>
 									<li>Spans across multiple Availability Zones (AZ)</li>
 									<li>Perfect to store data and backups; A safe place to store files. </li>
+									<li>Designed for 99.999999999% (11 9’s) of data durability</li>
+									<li>Delivers strong read-after-write consistency automatically, at no cost, and without changes to performance or availability.</li>
+									<li>Has a wide range of cost-effective storage classes</li>
+									<li>Allows for query-in-place services for analytics </li>
+									<li>S3 gives you robust capabilities to manage access, cost, replication, and data protection.</li>
 								</ul>
+								<p class="list-title">S3 Use Cases</p>
+								<ul>
+									<li>Backup and Restore</li>
+									<li>Disaster Recovery (DR)</li>
+									<li>Archive</li>
+									<li>Data Lakes and Big Data Analytics</li>
+									<li>Hybrid Cloud Storage</li>
+									<li>Cloud-native Applications</li>
+								</ul>
+								<p href="s3-deep" class="list-title">See S3 <a href="#S3-in-depth"><em>in-depth</em></a></p>
+							</section>
+
+							<a href="#EC2" class="link-title first"><h2 id="EC2">1.2 Elastic Compute Cloud (EC2)<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">EC2 in &lt;20 words:</p>
+								<span class="important">Virtual Server; Instance Store; EBS; On-Demand/Spot/Dedicated</span><br>
+								<p class="list-title">Amazon's description of EC2</p>
+								<p>
+									Elastic Compute Cloud is secure, resizable compute capacity in the 
+									cloud. It is designed to make web-scale cloud computing easier for 
+									developers. Amazon EC2’s simple web service interface allows you to 
+									obtain and configure capacity with minimal friction. It provides you 
+									with complete control of your computing resources and lets you run on 
+									Amazon’s proven computing environment.
+									<sup><abbr title="https://aws.amazon.com/ec2"><a href="https://aws.amazon.com/ec2">[7]</a></abbr></sup>
+								</p>
+								<p>
+									Amazon EC2 offers the broadest and deepest compute platform with 
+									choice of processor, storage, networking, operating system, and 
+									purchase model. Amazon offers the fastest processors in the cloud, as well 
+									being the only cloud with 400 Gbps ethernet networking. Amazon has the 
+									most powerful GPU instances for machine learning training and graphics 
+									workloads, as well as the lowest cost-per-inference instances in the 
+									cloud. More SAP, HPC, Machine Learning, and Windows workloads run on 
+									AWS than any other cloud.
+									<sup><abbr title="https://aws.amazon.com/ec2"><a href="https://aws.amazon.com/ec2">[7]</a></abbr></sup>
+								</p>
+							</section>
+						</section>
+
+						<!-- 2: Services In-Depth -->
+						<section>
+							<h1>AWS Resources In-Depth</h1>
+							
+							<a href="#S3-in-depth" class="link-title first"><h2 id="S3-in-depth">2.1 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								
+								<h3>S3 Storage Classes</h3>
+								<p class="list-title">S3 Infrequently Accessed (IA):</p>
+								<p>
+									Infrequently Accessed, but requires rapid access when needed. 
+									Lower fee, but there’s a retrieval fee.
+								</p>
+								<p class="list-title">S3 One Zone - IA:</p>
+								<p>
+									Same as S3 - IA, but you don’t require multiple Availability 
+									Zone (AZ) data resilience; 99.5% availability
+								</p>
+								<p class="list-title">S3 Intelligent Tiering:</p>
+								<p>
+									Designed to optimize costs by automatically moving data to the 
+									most cost-effective access tier, without performance impact or 
+									operational overhead.
+								</p>
+								<p class="list-title">S3 Glacier:</p>
+								<p>
+									Secure, durable, low-cost storage for data archiving. Retrieval 
+									times are configurable from minutes to hours. There’s also a 
+									retrieval fee.
+								</p>
+								<p class="list-title">S3 Glacier Deep Dive:</p>
+								<p>
+									Lowest cost option, where the retrieval times are 12+ hours. 
+									There’s also a retrieval fee.
+								</p>
+								<h3>Additional Notes on S3</h3>
+								<p class="list-title">Can be used to host STATIC websites</p>
+								<p>
+									Websites that don't require a "backend" can be hosted on AWS S3. 
+									If a website consists of static pages, such as JavaScript, HTML, 
+									and CSS, then it can be hosted on S3. If your website uses PHP 
+									and/or database connections then it cannot be hosted on S3. 
+									Additionally, it should be noted that Wordpress requries database 
+									connections, so you cannot host Wordpress websites on S3.
+								</p>
+								<p>
+									By default you can only provide HTTP connections to a S3 website; 
+									however, HTTPS connections can be served if you connect S3 to 
+									CloudFront and an SSL certificate (all of which can be done in AWS). 
+								</p>
+								<p>
+									To provide redirection from www.yourwebsite.com to yourwebsite.com, 
+									you will need to create two buckets, one named www.yourwebsite.com, 
+									and the other named yourwebsite.com. From there you can have the 
+									www.yourwebsite.com bucket redirect traffic to your yourwebsite.com 
+									bucket.
+								</p>
+								<p>
+									To change the name of the endpoint which users connect to an S3 bucket
+									to, you can create a domain name using AWS Route53, and change it's Alias 
+									record to your AWS buckets.
+								</p>
+								<p class="list-title">NOT suitable to host on operating system on</p>
 							</section>
 						</section>
 

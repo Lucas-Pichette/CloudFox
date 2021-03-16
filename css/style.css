@@ -48,11 +48,6 @@ h1, h2 {
   margin-top: 25px;
 }
 
-.important {
-  background: -webkit-gradient(linear, left top, right top, from(#000), to(#000)) no-repeat 50px 50px;
-  background: linear-gradient(to right, #000, #000) no-repeat 50px 50px;
-}
-
 /* 
 Colors are 6-variation limited 
 (to shift focus from color-theory back to design)
@@ -144,6 +139,7 @@ section > h1 {
   font-size: 28px;
   color: #4243FF;
   margin-bottom: 45px;
+  margin-top: 75px;
 }
 
 section > a > h2 {
@@ -239,7 +235,10 @@ tr {
 }
 
 .important {
-  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(17, 0, 255, 0.205)), to(rgba(255, 145, 0, 0.205))) no-repeat -5px 9px;
+  background: linear-gradient(to left, rgba(17, 0, 255, 0.205), rgba(255, 145, 0, 0.205)) no-repeat -5px 9px;
 }
 
 .code {
@@ -334,7 +333,7 @@ b.index-title {
   /* Same height as welcome-splash + height/font-size of h1*/
   /* 400px + 28px*/
   font-size: 36px;
-  color: #777;
+  color: #b8b8b8;
 }
 
 #index-toggle:hover {
@@ -392,6 +391,7 @@ b.index-title {
 
 #index-mobile {
   display: none;
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1150px) {

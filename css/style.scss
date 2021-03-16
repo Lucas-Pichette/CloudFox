@@ -34,6 +34,7 @@ section > h1{
 	font-size:28px;
 	color:$blue-2;
 	margin-bottom:45px;
+	margin-top:75px;
 }
 
 section > a > h2{
@@ -130,8 +131,9 @@ tr{
 }
 
 .important {
-	font-weight:bold;
-	@extend %highlight-y;
+	display:inline-block;
+	margin-bottom:15px;
+	background:linear-gradient(to left, rgba(17, 0, 255, 0.205), rgba(255, 145, 0, 0.205)) no-repeat -5px 9px;
 }
 
 .code {
@@ -227,7 +229,7 @@ b.index-title {
 	/* 400px + 28px*/
 
 	font-size:36px;
-	color:#777;
+	color:rgb(184, 184, 184);
 	&:hover{
 		color: #111;
 	}
@@ -282,6 +284,7 @@ b.index-title {
 
 #index-mobile{
 	display:none;
+	margin-top:30px;
 	@include tablet{
 		display:block;
 	}
