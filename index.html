@@ -1,5 +1,5 @@
 <!doctype html>
-
+<!-- source number abbr : 12 -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -54,6 +54,9 @@
 						<ul>
 							<li><a href="#S3"><b>1.1&nbsp;</b> S3</a></li>
 							<li><a href="#EC2"><b>1.2&nbsp;</b> EC2</a></li>
+							<li><a href="#IAM"><b>1.3&nbsp;</b> IAM</a></li>
+							<li><a href="#VPC"><b>1.4&nbsp;</b> VPC</a></li>
+							<li><a href="#Route53"><b>1.5&nbsp;</b> Route53</a></li>
 						</ul>
 						<b class="primary">AWS Resources In-Depth</b>
 						<ul>
@@ -87,6 +90,9 @@
 								<ul>
 									<li><a href="#S3"><b>1.1&nbsp;</b> S3</a></li>
 									<li><a href="#EC2"><b>1.2&nbsp;</b> EC2</a></li>
+									<li><a href="#IAM"><b>1.3&nbsp;</b> IAM</a></li>
+									<li><a href="#VPC"><b>1.4&nbsp;</b> VPC</a></li>
+									<li><a href="#Route53"><b>1.5&nbsp;</b> Route53</a></li>
 								</ul>
 								<b class="primary">AWS Resources In-Depth</b>
 								<ul>
@@ -670,6 +676,7 @@
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">S3 in &lt;20 words:</p>
 								<span class="important">Object storage; 11 9's durability; Multi-AZ</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
 								<p class="list-title">Amazon's description of S3</p>
 								<p>
 									Simple Storage Service (S3) is designed for 
@@ -709,6 +716,7 @@
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">EC2 in &lt;20 words:</p>
 								<span class="important">Virtual Server; Instance Store; EBS; On-Demand/Spot/Dedicated</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
 								<p class="list-title">Amazon's description of EC2</p>
 								<p>
 									Elastic Compute Cloud (EC2) is secure, resizable compute capacity in 
@@ -729,6 +737,62 @@
 									cloud. More SAP, HPC, Machine Learning, and Windows workloads run on 
 									AWS than any other cloud.
 									<sup><abbr title="https://aws.amazon.com/ec2"><a href="https://aws.amazon.com/ec2">[7]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#IAM" class="link-title first"><h2 id="IAM">1.3 Identity and Access Management (IAM)<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">IAM in &lt;20 words:</p>
+								<span class="important">Users/Groups; Permissions; AWS Management Console; Identity Federation</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of IAM</p>
+								<p>
+									AWS Identity and Access Management (IAM) enables you to manage access to 
+									AWS services and resources securely. Using IAM, you can create and 
+									manage AWS users and groups, and use permissions to allow and deny their 
+									access to AWS resources. IAM is a feature of your AWS account offered at 
+									no additional charge.
+									<sup><abbr title="https://aws.amazon.com/iam/"><a href="https://aws.amazon.com/iam/">[10]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#VPC" class="link-title first"><h2 id="VPC">1.4 Virtual Private Cloud (VPC)<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">VPC in &lt;20 words:</p>
+								<span class="important">Public/Private Subnets; IP address; Internet Gateway</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of VPC</p>
+								<p>
+									Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you 
+									launch AWS resources in a logically isolated virtual network that 
+									you define. You have complete control over your virtual networking 
+									environment, including selection of your own IP address range, 
+									creation of subnets, and configuration of route tables and network 
+									gateways. You can use both IPv4 and IPv6 for most resources in your 
+									virtual private cloud, helping to ensure secure and easy access to 
+									resources and applications.
+									<sup><abbr title="https://aws.amazon.com/vpc/"><a href="https://aws.amazon.com/vpc/">[11]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#Route53" class="link-title first"><h2 id="Route53">1.5 Route53<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">Route53 in &lt;20 words:</p>
+								<span class="important">DNS, IP addresses, Phone Book</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of Route53</p>
+								<p>
+									Amazon Route 53 is a highly available and scalable cloud Domain 
+									Name System (DNS) web service. It is designed to give developers 
+									and businesses an extremely reliable and cost effective way to 
+									route end users to Internet applications by translating names like 
+									www.example.com into the numeric IP addresses like 192.0.2.1 that 
+									computers use to connect to each other. Amazon Route 53 is fully 
+									compliant with IPv6 as well.
+									<sup><abbr title="https://aws.amazon.com/route53/"><a href="https://aws.amazon.com/route53/">[12]</a></abbr></sup>
 								</p>
 							</section>
 						</section>
