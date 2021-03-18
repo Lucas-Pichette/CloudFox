@@ -109,6 +109,33 @@ table{
 
 tr{
 	width:100%;
+	margin:0;
+}
+
+table.standard{
+	margin-top:20px;
+}
+
+table.standard > tbody > tr:nth-child(even){
+	background-color:#DDD;
+}
+table.standard > tbody > tr:nth-child(odd){
+	background-color:transparent;
+}
+table.standard > tbody > tr.header-row{
+	background-color:#333;
+	color:#EEE;
+}
+table.standard > tbody > tr > td, th{
+	padding: 10px 20px;
+	margin:0;
+}
+.first-col{
+	font-weight:bold;
+}
+td.header-description{
+	font-style:italic;
+	color:#444;
 }
 
 /* Specifying modular classes */
