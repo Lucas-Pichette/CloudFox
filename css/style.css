@@ -158,8 +158,19 @@ section > h3 {
 }
 
 table {
+  table-layout: fixed;
   height: 500px;
   padding: 0;
+  max-width: 98%;
+}
+
+tbody {
+  max-width: 100%;
+}
+
+td {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 a {
@@ -412,11 +423,6 @@ b.index-title {
   /* provides automatic scroll-bar behavior*/
 }
 
-#index-mobile {
-  padding-left: 40px;
-  margin: 0;
-}
-
 #index-mobile > ul {
   padding-left: 20px;
 }
@@ -428,13 +434,19 @@ b.index-title {
 
 @media screen and (min-width: 768px) and (max-width: 1150px) {
   #index-mobile {
+    width: 98%;
     display: block;
+    margin: auto;
+    margin-top: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
   #index-mobile {
+    width: 98%;
     display: block;
+    margin: auto;
+    margin-top: 30px;
   }
 }
 
@@ -467,14 +479,16 @@ b.index-title {
 
 @media screen and (min-width: 768px) and (max-width: 1150px) {
   #book {
-    width: 90%;
+    padding: 0;
+    width: 98%;
     display: block;
   }
 }
 
 @media screen and (max-width: 767px) {
   #book {
-    width: 90%;
+    padding: 0;
+    width: 98%;
     display: block;
   }
 }
@@ -501,7 +515,7 @@ b.index-title {
 
 @media screen and (min-width: 768px) and (max-width: 1150px) {
   #content {
-    width: 600px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -509,7 +523,7 @@ b.index-title {
 
 @media screen and (max-width: 767px) {
   #content {
-    width: 90%;
+    width: 98%;
     margin-left: auto;
     margin-right: auto;
   }

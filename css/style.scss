@@ -52,8 +52,17 @@ section > h3{
 }
 
 table{
+	table-layout:fixed;
 	height:500px;
 	padding:0;
+	max-width:98%;
+}
+tbody{
+	max-width:100%;
+}
+td{
+	text-overflow:ellipsis;
+	word-wrap:break-word;
 }
 
 a{
@@ -290,14 +299,6 @@ b.index-title {
 }
 
 #index{
-	&-mobile{
-		padding-left:40px;
-		margin:0;
-		& > ul{
-			padding-left: 20px;
-		}
-	}
-
 	vertical-align: top;
 
 	height:500px;
@@ -306,6 +307,14 @@ b.index-title {
 	position:sticky;
 	top:50px;
 
+	&-mobile{
+	
+		
+		& > ul{
+			padding-left: 20px;
+		}
+	}
+
 	/* provides automatic scroll-bar behavior*/
 }
 
@@ -313,10 +322,16 @@ b.index-title {
 	display:none;
 	margin-top:30px;
 	@include tablet{
+		width:98%;
 		display:block;
+		margin:auto;
+		margin-top:30px;
 	}
 	@include mobile{
+		width:98%;
 		display:block;
+		margin:auto;
+		margin-top:30px;
 	}
 }
 
@@ -340,11 +355,13 @@ b.index-title {
 		display: inline-block;
 	}
 	@include tablet{
-		width:90%;
+		padding:0;
+		width:98%;
 		display: block;
 	}
 	@include mobile{
-		width:90%;
+		padding:0;
+		width:98%;
 		display: block;
 	}
 }
@@ -362,12 +379,12 @@ b.index-title {
 		margin-right:auto;
 	}
 	@include tablet{
-		width:600px;
+		width:80%;
 		margin-left:auto;
 		margin-right:auto;
 	}
 	@include mobile{
-		width:90%;
+		width:98%;
 		margin-left:auto;
 		margin-right:auto;
 	}
