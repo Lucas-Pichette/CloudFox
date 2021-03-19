@@ -57,11 +57,15 @@
 							<li><a href="#IAM"><b>1.3&nbsp;</b> IAM</a></li>
 							<li><a href="#VPC"><b>1.4&nbsp;</b> VPC</a></li>
 							<li><a href="#Route53"><b>1.5&nbsp;</b> Route53</a></li>
+							<li><a href="#CloudWatch"><b>1.6&nbsp;</b> CloudWatch</a></li>
+							<li><a href="#CloudTrail"><b>1.7&nbsp;</b> CloudTrail</a></li>
+							<li><a href="#CloudFront"><b>1.8&nbsp;</b> CloudFront</a></li>
 						</ul>
 						<b class="primary">AWS Resources In-Depth</b>
 						<ul>
 							<li><a href="#S3-in-depth"><b>2.1&nbsp;</b> S3</a></li>
 						</ul>
+						<a id="mobile-index-teleport" href="#index-mobile" class="noul"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 					</div>
 				</tr>
 				<!-- Nav and book are on same row for non-mobile-->
@@ -93,6 +97,9 @@
 									<li><a href="#IAM"><b>1.3&nbsp;</b> IAM</a></li>
 									<li><a href="#VPC"><b>1.4&nbsp;</b> VPC</a></li>
 									<li><a href="#Route53"><b>1.5&nbsp;</b> Route53</a></li>
+									<li><a href="#CloudWatch"><b>1.6&nbsp;</b> CloudWatch</a></li>
+									<li><a href="#CloudTrail"><b>1.7&nbsp;</b> CloudTrail</a></li>
+									<li><a href="#CloudFront"><b>1.8&nbsp;</b> CloudFront</a></li>
 								</ul>
 								<b class="primary">AWS Resources In-Depth</b>
 								<ul>
@@ -793,6 +800,86 @@
 									computers use to connect to each other. Amazon Route 53 is fully 
 									compliant with IPv6 as well.
 									<sup><abbr title="https://aws.amazon.com/route53/"><a href="https://aws.amazon.com/route53/">[12]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#CloudWatch" class="link-title first"><h2 id="CloudWatch">1.6 CloudWatch<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">CloudWatch in &lt;20 words:</p>
+								<span class="important">Alarms; Monitor Performance</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of CloudWatch</p>
+								<p>
+									Amazon CloudWatch is a monitoring and observability service 
+									built for DevOps engineers, developers, site reliability engineers 
+									(SREs), and IT managers. CloudWatch provides you with data and 
+									actionable insights to monitor your applications, respond to 
+									system-wide performance changes, optimize resource utilization, and 
+									get a unified view of operational health. CloudWatch collects 
+									monitoring and operational data in the form of logs, metrics, and 
+									events, providing you with a unified view of AWS resources, 
+									applications, and services that run on AWS and on-premises servers. 
+									You can use CloudWatch to detect anomalous behavior in your 
+									environments, set alarms, visualize logs and metrics side by side, 
+									take automated actions, troubleshoot issues, and discover insights to 
+									keep your applications running smoothly.
+									<sup><abbr title="https://aws.amazon.com/cloudwatch/"><a href="https://aws.amazon.com/cloudwatch/">[13]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#CloudTrail" class="link-title first"><h2 id="CloudTrail">1.7 CloudTrail<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">CloudTrail in &lt;20 words:</p>
+								<span class="important">Audits; Storing Event Logs; API Calls</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of CloudTrail</p>
+								<p>
+									AWS CloudTrail is a service that enables governance, compliance, 
+									operational auditing, and risk auditing of your AWS account. With 
+									CloudTrail, you can log, continuously monitor, and retain account 
+									activity related to actions across your AWS infrastructure. CloudTrail 
+									provides event history of your AWS account activity, including actions 
+									taken through the AWS Management Console, AWS SDKs, command line tools, 
+									and other AWS services. This event history simplifies security analysis, 
+									resource change tracking, and troubleshooting. In addition, you can use 
+									CloudTrail to detect unusual activity in your AWS accounts. These 
+									capabilities help simplify operational analysis and troubleshooting.
+									<sup><abbr title="https://aws.amazon.com/cloudtrail/"><a href="https://aws.amazon.com/cloudtrail/">[14]</a></abbr></sup>
+								</p>
+							</section>
+
+							<a href="#CloudFront" class="link-title first"><h2 id="CloudFront">1.8 CloudFront<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">CloudFront in &lt;20 words:</p>
+								<span class="important">CDN; Caching at Edgepoints; Offloads Origin Traffic</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of CloudFront</p>
+								<p>
+									Amazon CloudFront is a fast content delivery network (CDN) service that 
+									securely delivers data, videos, applications, and APIs to customers 
+									globally with low latency, high transfer speeds, all within a 
+									developer-friendly environment.
+									<sup><abbr title="https://aws.amazon.com/cloudfront/"><a href="https://aws.amazon.com/cloudfront/">[15]</a></abbr></sup>
+								</p>
+								<p>
+									CloudFront offers the most advanced security capabilities, including field 
+									level encryption and HTTPS support, seamlessly integrated with AWS Shield, 
+									AWS Web Application Firewall and Route 53 to protect against multiple types 
+									of attacks including network and application layer DDoS attacks. These 
+									services co-reside at edge networking locations – globally scaled and 
+									connected via the AWS network backbone – providing a more secure, performant, 
+									and available experience for your users.
+									<sup><abbr title="https://aws.amazon.com/cloudfront/"><a href="https://aws.amazon.com/cloudfront/">[15]</a></abbr></sup>
+								</p>
+								<p>
+									CloudFront works seamlessly with any AWS origin, such as Amazon S3, Amazon EC2, 
+									Elastic Load Balancing, or with any custom HTTP origin. You can customize your 
+									content delivery through CloudFront using the secure and programmable edge 
+									computing feature AWS Lambda@Edge.
+									<sup><abbr title="https://aws.amazon.com/cloudfront/"><a href="https://aws.amazon.com/cloudfront/">[15]</a></abbr></sup>
 								</p>
 							</section>
 						</section>

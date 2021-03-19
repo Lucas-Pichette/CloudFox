@@ -59,13 +59,13 @@ as '3', where the higher the value is the darker it
 gets, and the lower the value the lighter it gets.
 */
 /*https://codepen.io/devilishalchemist/pen/ZYLZay*/
-a {
+a:not(.noul) {
   position: relative;
   text-decoration: none;
   padding-bottom: 4px;
 }
 
-a:before, a:after {
+a:not(.noul):before, a:not(.noul):after {
   content: '';
   position: absolute;
   bottom: 3px;
@@ -75,7 +75,7 @@ a:before, a:after {
   background-color: #e48500;
 }
 
-a:before {
+a:not(.noul):before {
   opacity: 0;
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
@@ -85,7 +85,7 @@ a:before {
   transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-a:after {
+a:not(.noul):after {
   opacity: 0;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
@@ -95,20 +95,20 @@ a:after {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-a:hover:before, a:hover:after, a:focus:before, a:focus:after {
+a:not(.noul):hover:before, a:not(.noul):hover:after, a:not(.noul):focus:before, a:not(.noul):focus:after {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-a:hover:before, a:focus:before {
+a:not(.noul):hover:before, a:not(.noul):focus:before {
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-a:hover:after, a:focus:after {
+a:not(.noul):hover:after, a:not(.noul):focus:after {
   -webkit-transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
@@ -325,6 +325,20 @@ td.header-description {
 }
 
 /* Specific component styling */
+#mobile-index-teleport {
+  top: 20px;
+  position: fixed;
+  width: auto;
+}
+
+#mobile-index-teleport:hover > * {
+  color: #333333;
+}
+
+#mobile-index-teleport > * {
+  color: rgba(51, 51, 51, 0.514);
+}
+
 #index-content > ul {
   margin-top: 3px;
   margin-bottom: 10px;
@@ -421,6 +435,10 @@ b.index-title {
   position: sticky;
   top: 50px;
   /* provides automatic scroll-bar behavior*/
+}
+
+#index-mobile {
+  position: relative;
 }
 
 #index-mobile > ul {

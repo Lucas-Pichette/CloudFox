@@ -68,7 +68,9 @@ td{
 a{
 	//background-color:green;
 	color: $black;
-	@extend %ul-anim-1;
+	&:not(.noul){
+		@extend %ul-anim-1;
+	}
 }
 
 ul{ 
@@ -209,6 +211,18 @@ td.header-description{
 }
 
 /* Specific component styling */
+#mobile-index-teleport{
+	top:20px;
+	position:fixed;
+	width:auto;
+	
+	&:hover > *{
+		color: rgb(51, 51, 51);
+	}
+	& > *{
+		color: rgba(51, 51, 51, 0.514);
+	}
+}
 
 #index-content > ul {
 	margin-top:3px;
@@ -308,8 +322,7 @@ b.index-title {
 	top:50px;
 
 	&-mobile{
-	
-		
+		position:relative;
 		& > ul{
 			padding-left: 20px;
 		}
