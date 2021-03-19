@@ -121,6 +121,18 @@ html {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 140%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+  html {
+    font-size: 120%;
+  }
+}
+
 h1 {
   font-size: 42px;
 }
@@ -136,7 +148,7 @@ h6 {
 }
 
 section > h1 {
-  font-size: 28px;
+  font-size: 130%;
   color: #4243FF;
   margin-bottom: 45px;
   margin-top: 75px;
@@ -144,7 +156,7 @@ section > h1 {
 
 section > a > h2 {
   margin-top: 35px;
-  font-size: 22px;
+  font-size: 120%;
 }
 
 section > a > .first {
@@ -377,7 +389,7 @@ b.index-title {
   display: block;
   float: initial;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 120%;
 }
 
 #index-toggle {
