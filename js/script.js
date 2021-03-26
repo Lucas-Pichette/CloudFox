@@ -134,6 +134,7 @@ function loadQuiz(chapter){
 	
 	const statusBtn = document.getElementById("c"+chapter+"-sb");
 	statusBtn.style.color = "grey";
+	statusBtn.style.cursor = "auto";
 	statusBtn.innerHTML = "Waiting...";
 }
 
