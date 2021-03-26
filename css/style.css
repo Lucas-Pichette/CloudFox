@@ -337,6 +337,21 @@ td.header-description {
 }
 
 /* Specific component styling */
+table.quiz-table {
+  display: inline-block;
+  width: 100%;
+}
+
+table.quiz-table > tbody {
+  display: inline-block;
+  width: 100%;
+}
+
+table.quiz-table > tbody > tr {
+  display: inline-block;
+  width: 100%;
+}
+
 #mobile-index-teleport {
   top: 20px;
   position: fixed;
@@ -640,6 +655,34 @@ b.index-title {
   border-collapse: separate;
   width: 100%;
   height: 100%;
+}
+
+.buttons-row > td {
+  display: block;
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1350px) {
+  .buttons-row > td {
+    width: 650px;
+  }
+}
+
+@media screen and (min-width: 1351px) {
+  .buttons-row > td {
+    width: 800px;
+  }
+  .buttons-row > td > table > tbody > tr > td.quiz-btns {
+    width: 200px;
+    height: 40px;
+  }
+  .buttons-row > td > table > tbody > tr > td.quiz-display {
+    width: 350px;
+    height: 40px;
+  }
+  .buttons-row > td > table > tbody > tr > td#check-btn-box {
+    width: 250px;
+    height: 40px;
+  }
 }
 
 .quiz-btns {
