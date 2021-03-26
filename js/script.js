@@ -195,6 +195,9 @@ function checkAnswer(chapter){
 			} else if(is_checked){
 				o_i_text.style.textDecoration = "underline";
 				o_i_text.style.textDecorationColor = "red";
+			} else{
+				o_i_text.style.textDecoration = "";
+				o_i_text.style.textDecorationColor = "";
 			}
 		}
 		if(is_checked){
