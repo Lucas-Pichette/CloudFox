@@ -81,15 +81,8 @@ a{
 
 ul{ 
 	margin-top:5px;
-	list-style: none; 
-	padding-left:25px;
-}
-
-ul li:before{ 
-	color:$black;
-	/* Space after dot is actually unicode. ' ' */
-	content:"• "; 
-	font-size:10pt; 
+	padding-left:40px;
+	list-style: circle url("../img/bullet.png");
 }
 
 li{
