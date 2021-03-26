@@ -149,6 +149,7 @@ function isAnOptionChecked(chapter){
 }
 
 function checkAnswer(chapter){
+	const question = parseInt(document.getElementById("q-title-num").innerHTML) - 1;
 	const options = questions[chapter][question].options;
 	const optionRow = document.getElementById("c"+chapter+"-or");
 	if(optionRow.style.filter == "blur(4px)"){
@@ -165,7 +166,6 @@ function checkAnswer(chapter){
 		return;
 	}
 
-	const question = parseInt(document.getElementById("q-title-num").innerHTML) - 1;
 	const statusBtn = document.getElementById("c"+chapter+"-sb");
 	
 	//const userAnswer = 
@@ -269,6 +269,13 @@ function changeQuestion(chapter, changeby){
 		option_i.style.textDecorationColor = "";
 		const optionCheckElement = document.getElementById("c"+chapter+"-o"+(i+1)+"-c");
 		optionCheckElement.style.display = "none";
+	}
+
+	let optionIsChecked = isAnOptionChecked(chapter);
+	if(optionIsChecked){
+		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(0, 58, 0)";
+	} else{
+		document.getElementById("check-btn-box").style.boxShadow = "";
 	}
 }
 
