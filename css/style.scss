@@ -71,8 +71,9 @@ td{
 	word-wrap:break-word;
 }
 
-a{
+a {
 	//background-color:green;
+	cursor:pointer;
 	color: $black;
 	&:not(.noul){
 		@extend %ul-anim-1;
@@ -151,7 +152,54 @@ td.header-description{
 	color:#444;
 }
 
+em.note {
+	color:#777;
+	text-align:center;
+	display:block;
+	font-size:80%;
+}
+
 /* Specifying modular classes */
+img.xlg {
+	display:block;
+	width:100%;
+	height:auto;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+}
+img.lg {
+	display:block;
+	width:90%;
+	height:auto;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	margin:auto;
+	@include desktop{
+		width:80%;
+	}
+}
+img.md {
+	display:block;
+	width:80%;
+	height:auto;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	margin:auto;
+	@include desktop{
+		width:60%;
+	}
+}
+a.img-link{
+	& > img {
+		border:0;
+		outline: 1px solid $black;
+	}
+	& > img:hover {
+		border:0;
+		outline: 2px solid $black;
+	}
+}
+
 .link{
 	display:inline;
 	font-size:14px;

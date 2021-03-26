@@ -62,6 +62,7 @@ a:not(.noul) {
   position: relative;
   text-decoration: none;
   padding-bottom: 4px;
+  cursor: pointer;
 }
 
 a:not(.noul):before, a:not(.noul):after {
@@ -185,6 +186,7 @@ td {
 }
 
 a {
+  cursor: pointer;
   color: #333;
 }
 
@@ -263,7 +265,62 @@ td.header-description {
   color: #444;
 }
 
+em.note {
+  color: #777;
+  text-align: center;
+  display: block;
+  font-size: 80%;
+}
+
 /* Specifying modular classes */
+img.xlg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+img.lg {
+  display: block;
+  width: 90%;
+  height: auto;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin: auto;
+}
+
+@media screen and (min-width: 1351px) {
+  img.lg {
+    width: 80%;
+  }
+}
+
+img.md {
+  display: block;
+  width: 80%;
+  height: auto;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin: auto;
+}
+
+@media screen and (min-width: 1351px) {
+  img.md {
+    width: 60%;
+  }
+}
+
+a.img-link > img {
+  border: 0;
+  outline: 1px solid #333;
+}
+
+a.img-link > img:hover {
+  border: 0;
+  outline: 2px solid #333;
+}
+
 .link {
   display: inline;
   font-size: 14px;
