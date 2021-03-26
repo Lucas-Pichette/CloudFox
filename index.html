@@ -764,9 +764,9 @@
 								</p>
 								<p class="list-title">Components of IAM</p>
 								<ul>
-									<li>IAM <b>Identities</b>:</li>
+									<li><b>Identities</b>:</li>
 									<ul class="nested">
-										<li> 
+										<li>
 											<em>An IAM Identity provides access to an AWS account.</em> 
 											An IAM identity represents a user, and can be authenticated 
 											and then authorized to perform actions in AWS. Each IAM identity 
@@ -774,15 +774,25 @@
 											what actions a user, role, or member of a group can perform, on 
 											which AWS resources, and under what conditions. 
 										</li>
-										<li> Users: A singular 'principal' used to delegate permissions.</li>
-										<li> Groups: Collections of IAM Users.</li>
+										<li><u>Users</u>: A singular 'principal' used to delegate permissions.</li>
+										<li><u>Groups</u>: Collections of IAM Users.</li>
 										<li>
-											Roles: Provides temporary permissions to users, services, or 
+											<u>Roles</u>: Provides temporary permissions to users, services, or 
 											applications to your AWS resources. Also allows for providing 
 											permissions to an AWS resource for specific interaction with 
 											another AWS resource.
 										</li>
 									</ul>
+									<li>
+										<b>Principals</b>: Services and people that interact with your AWS 
+										environment (think of IAM Users).
+									</li>
+									<li>
+										<b>Tagging</b>: You can use tagging to help organize your AWS 
+										resources and principals. Need all resources in China shut down? 
+										With tagging this is possible. Need all Developers to lose permissions 
+										for a moment? With tagging this is possible as well.
+									</li>
 								</ul>
 							</section>
 
