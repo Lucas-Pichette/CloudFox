@@ -191,6 +191,10 @@ a {
 ul {
   margin-top: 5px;
   padding-left: 40px;
+  list-style: circle url("../img/bullet2.png");
+}
+
+ul > ul.nested {
   list-style: circle url("../img/bullet.png");
 }
 
