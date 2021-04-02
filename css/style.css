@@ -430,7 +430,8 @@ table.quiz-table > tbody > tr {
 }
 
 #welcome-splash {
-  height: 300px;
+  height: auto;
+  min-height: 350px;
   display: block;
   position: relative;
   background-size: 100px auto;

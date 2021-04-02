@@ -298,7 +298,8 @@ table.quiz-table{
 }
 
 #welcome-splash{
-	height:300px;
+	height:auto;
+	min-height:350px;
 
 	display:block;
 	position:relative;

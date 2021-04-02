@@ -34,7 +34,15 @@
 						<h1 class="center-h">AWS Handbook</h1>
 						<h5 class="center-h">A Guide for AWS Geeks</h5>
 						<h6 class="center-h">By <a href="https://github.com/Lucas-Pichette">Lucas Pichette</a></h6>
-						<h6 class="center-h" style="font-size:12px"><a href="http://thecloudfox.com/"><em>Looking for the old version?</em></a></h6>
+						<h6 class="center-h" style="font-size:65%;width:40%;margin:auto;color:#888;">
+							<em>Due to frequent updates please clear cached site data 
+								<span style="color:#333;font-weight:bold;">
+									if visual errors occur
+								</span>
+								, or email them to me at: 
+								<a href="mailto:thecloudfox.lucas@gmail.com" style="color:#555;">thecloudfox.lucas@gmail.com</a>
+							</em>
+						</h6>
 					</div>
 				</tr>
 				<!-- Nav on separate row from book on mobile-->
@@ -118,7 +126,7 @@
 					<td id="book" style="margin:auto">
 						<!-- 0: Introduction to AWS and Cloud -->
 						<section>
-							<h1>Introduction to AWS</h1>
+							<h1 style="margin-top:0">Introduction to AWS</h1>
 
 							<a href="#What-is-AWS?" class="link-title first"><h2 id="What-is-AWS?">0.1 What is AWS?<i class="fas fa-link link"></i></h2></a>
 							<section>
@@ -818,7 +826,10 @@
 											what actions a user, role, or member of a group can perform, on 
 											which AWS resources, and under what conditions. 
 										</li>
-										<li><u>Users</u>: A singular 'principal' used to delegate permissions.</li>
+										<li>
+											<u>Users</u>: A singular 'principal' used to delegate permissions. 
+											Global scope. Start with no permissions.
+										</li>
 										<li><u>Groups</u>: Collections of IAM Users.</li>
 										<li>
 											<u>Roles</u>: Provides temporary permissions to users, services, or 
@@ -836,6 +847,18 @@
 										resources and principals. Need all resources in China shut down? 
 										With tagging this is possible. Need all Developers to lose permissions 
 										for a moment? With tagging this is possible as well.
+									</li>
+									<li>
+										Policies: JSON documents that configure rules for accessing AWS resources. 
+										Global scope.
+									</li>
+								</ul>
+								<p class="list-title">Additional Notes:</p>
+								<ul>
+									<li>
+										You cannot log in to the AWS console using the Access Key ID / Secret Access 
+										Key pair. Instead, you must generate a password for the user, and supply the 
+										user with this password and your organization's unique AWS console login URL.
 									</li>
 								</ul>
 							</section>
