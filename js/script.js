@@ -233,24 +233,22 @@ const questions = [
 let currentMode = "dark";
 function togglemode(){
 	const mode = document.getElementById("mode");
-	const lightbtn = document.getElementById("lmodebtndesktop");
-	const darkbtn = document.getElementById("dmodebtndesktop");
-	const modetxt = document.getElementById("modeTypeText");
 	// If light mode, and button was clicked, switch to dark mode.
 	if (currentMode != "dark") {
 		currentMode = "dark";
 		mode.href = "./css/darkmode.css";
-		darkbtn.style.display = "none";
-		lightbtn.style.display = "inline-block";
-		modetxt.innerHTML = "light mode";
+		document.getElementById("dmodebtndesktop").style.display = "none";
+		document.getElementById("lmodebtndesktop").style.display = "inline-block";
+		document.getElementById("dmodebtndesktop-mobile").style.display = "none";
+		document.getElementById("lmodebtndesktop-mobile").style.display = "inline-block";
 	} else{
 		currentMode = "light";
 		mode.href = "";
-		darkbtn.style.display = "inline-block";
-		lightbtn.style.display = "none";
-		modetxt.innerHTML = "dark mode";
+		document.getElementById("dmodebtndesktop").style.display = "inline-block";
+		document.getElementById("lmodebtndesktop").style.display = "none";
+		document.getElementById("dmodebtndesktop-mobile").style.display = "inline-block";
+		document.getElementById("lmodebtndesktop-mobile").style.display = "none";
 	}
-	
 }
 
 /* Going to load in questions for the quiz the same order every time.*/

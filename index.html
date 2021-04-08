@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- source number abbr : 12 -->
+<!-- source number abbr : 18 -->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -52,9 +52,10 @@
 					<div id="index-mobile">
 						<!-- Light/Dark Mode Toggle -->
 						<div class="modeToggleWrapper" onclick="togglemode()" style="margin-top:50px;">
-							<i class="darkmodetogglebtn fas fa-moon" id="dmodebtndesktop" style="display:none;"></i>
-							<i class="lightmodetogglebtn fas fa-sun" id="lmodebtndesktop" style="display:inline-block;"></i>
-							<span id="modeTypeText" style="display:inline;margin-left:10px;">light mode</span>
+							<span id="modeTypeText-mobile" style="display:inline;margin-right:10px;">―</span>
+							<div id="dmodebtndesktop-mobile" style="display:none"><i class="darkmodetogglebtn fas fa-moon"></i></div>
+							<div id="lmodebtndesktop-mobile" style="display:inline-block"><i class="lightmodetogglebtn fas fa-sun"></i></div>
+							<span style="display:inline;margin-left:10px;">―</span>
 						</div>
 
 						<b class="index-title">Index</b>
@@ -72,18 +73,22 @@
 						</ul>
 						<b class="primary">Fund. AWS Resources</b>
 						<ul>
-							<li><b>1.1&nbsp;</b> <a href="#S3">S3</a></li>
-							<li><b>1.2&nbsp;</b> <a href="#EC2">EC2</a></li>
-							<li><b>1.3&nbsp;</b> <a href="#IAM">IAM</a></li>
-							<li><b>1.4&nbsp;</b> <a href="#VPC">VPC</a></li>
-							<li><b>1.5&nbsp;</b> <a href="#Route53">Route53</a></li>
-							<li><b>1.6&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
-							<li><b>1.7&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
-							<li><b>1.8&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
+							<li><b>1.01&nbsp;</b> <a href="#S3">S3</a></li>
+							<li><b>1.02&nbsp;</b> <a href="#EC2">EC2</a></li>
+							<li><b>1.03&nbsp;</b> <a href="#IAM">IAM</a></li>
+							<li><b>1.04&nbsp;</b> <a href="#VPC">VPC</a></li>
+							<li><b>1.05&nbsp;</b> <a href="#Route53">Route53</a></li>
+							<li><b>1.06&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
+							<li><b>1.07&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
+							<li><b>1.08&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
+							<li><b>1.09&nbsp;</b> <a href="#DynamoDB">DynamoDB</a></li>
+							<li><b>1.10&nbsp;</b> <a href="#Aurora">Aurora</a></li>
+							<li><b>1.11&nbsp;</b> <a href="#RDS">RDS</a></li>
 						</ul>
 						<b class="primary">AWS Resources In-Depth</b>
 						<ul>
-							<li><b>2.1&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
+							<li><b>2.01&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
+							<li><b>2.02&nbsp;</b> <a href="#DynamoDB-in-depth">DynamoDB</a></li>
 						</ul>
 						<a id="mobile-index-teleport" href="#index-mobile" class="noul"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 					</div>
@@ -95,9 +100,10 @@
 						<div id="index">
 							<!-- Light/Dark Mode Toggle -->
 							<div class="modeToggleWrapper" onclick="togglemode()">
-								<i class="darkmodetogglebtn fas fa-moon" id="dmodebtndesktop" style="display:none;"></i>
-								<i class="lightmodetogglebtn fas fa-sun" id="lmodebtndesktop" style="display:inline-block;"></i>
-								<span id="modeTypeText" style="display:inline;margin-left:10px;">light mode</span>
+								<span id="modeTypeText" style="display:inline;margin-right:10px;">―</span>
+								<div id="dmodebtndesktop" style="display:none"><i class="darkmodetogglebtn fas fa-moon"></i></div>
+								<div id="lmodebtndesktop" style="display:inline-block"><i class="lightmodetogglebtn fas fa-sun"></i></div>
+								<span style="display:inline;margin-left:10px;">―</span>
 							</div>
 
 							<div id="indexSubWrapper" style="border-top:2px solid #999;border-bottom:2px solid #999;padding-top:15px;height:60vh">
@@ -127,21 +133,25 @@
 									<section id="idx-sec-2" style="display:none">
 										<b class="primary">Fund. AWS Resources</b>
 										<ul>
-											<li><b>1.1&nbsp;</b> <a href="#S3">S3</a></li>
-											<li><b>1.2&nbsp;</b> <a href="#EC2">EC2</a></li>
-											<li><b>1.3&nbsp;</b> <a href="#IAM">IAM</a></li>
-											<li><b>1.4&nbsp;</b> <a href="#VPC">VPC</a></li>
-											<li><b>1.5&nbsp;</b> <a href="#Route53">Route53</a></li>
-											<li><b>1.6&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
-											<li><b>1.7&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
-											<li><b>1.8&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
+											<li><b>1.01&nbsp;</b> <a href="#S3">S3</a></li>
+											<li><b>1.02&nbsp;</b> <a href="#EC2">EC2</a></li>
+											<li><b>1.03&nbsp;</b> <a href="#IAM">IAM</a></li>
+											<li><b>1.04&nbsp;</b> <a href="#VPC">VPC</a></li>
+											<li><b>1.05&nbsp;</b> <a href="#Route53">Route53</a></li>
+											<li><b>1.06&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
+											<li><b>1.07&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
+											<li><b>1.08&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
+											<li><b>1.09&nbsp;</b> <a href="#DynamoDB">DynamoDB</a></li>
+											<li><b>1.10&nbsp;</b> <a href="#Aurora">Aurora</a></li>
+											<li><b>1.11&nbsp;</b> <a href="#RDS">RDS</a></li>
 										</ul>
 									</section>
 									
 									<section id="idx-sec-3" style="display:none">
 										<b class="primary">AWS Resources In-Depth</b>
 										<ul>
-											<li><b>2.1&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
+											<li><b>2.01&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
+											<li><b>2.02&nbsp;</b> <a href="#DynamoDB-in-depth">DynamoDB</a></li>
 										</ul>
 									</section>
 									
@@ -765,7 +775,7 @@
 						<section>
 							<h1>Fundamental AWS Resources</h1>
 							
-							<a href="#S3" class="link-title first"><h2 id="S3">1.1 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
+							<a href="#S3" class="link-title first"><h2 id="S3">1.01 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">S3 in &lt;20 words:</p>
@@ -805,7 +815,7 @@
 								<p href="s3-deep" class="list-title">See S3 <a href="#S3-in-depth"><em>in-depth</em></a></p>
 							</section>
 
-							<a href="#EC2" class="link-title first"><h2 id="EC2">1.2 Elastic Compute Cloud (EC2)<i class="fas fa-link link"></i></h2></a>
+							<a href="#EC2" class="link-title first"><h2 id="EC2">1.02 Elastic Compute Cloud (EC2)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">EC2 in &lt;20 words:</p>
@@ -834,7 +844,7 @@
 								</p>
 							</section>
 
-							<a href="#IAM" class="link-title first"><h2 id="IAM">1.3 Identity and Access Management (IAM)<i class="fas fa-link link"></i></h2></a>
+							<a href="#IAM" class="link-title first"><h2 id="IAM">1.03 Identity and Access Management (IAM)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">IAM in &lt;20 words:</p>
@@ -898,7 +908,7 @@
 								</ul>
 							</section>
 
-							<a href="#VPC" class="link-title first"><h2 id="VPC">1.4 Virtual Private Cloud (VPC)<i class="fas fa-link link"></i></h2></a>
+							<a href="#VPC" class="link-title first"><h2 id="VPC">1.04 Virtual Private Cloud (VPC)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">VPC in &lt;20 words:</p>
@@ -918,7 +928,7 @@
 								</p>
 							</section>
 
-							<a href="#Route53" class="link-title first"><h2 id="Route53">1.5 Route53<i class="fas fa-link link"></i></h2></a>
+							<a href="#Route53" class="link-title first"><h2 id="Route53">1.05 Route53<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">Route53 in &lt;20 words:</p>
@@ -937,7 +947,7 @@
 								</p>
 							</section>
 
-							<a href="#CloudWatch" class="link-title first"><h2 id="CloudWatch">1.6 CloudWatch<i class="fas fa-link link"></i></h2></a>
+							<a href="#CloudWatch" class="link-title first"><h2 id="CloudWatch">1.06 CloudWatch<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">CloudWatch in &lt;20 words:</p>
@@ -962,7 +972,7 @@
 								</p>
 							</section>
 
-							<a href="#CloudTrail" class="link-title first"><h2 id="CloudTrail">1.7 CloudTrail<i class="fas fa-link link"></i></h2></a>
+							<a href="#CloudTrail" class="link-title first"><h2 id="CloudTrail">1.07 CloudTrail<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">CloudTrail in &lt;20 words:</p>
@@ -984,7 +994,7 @@
 								</p>
 							</section>
 
-							<a href="#CloudFront" class="link-title first"><h2 id="CloudFront">1.8 CloudFront<i class="fas fa-link link"></i></h2></a>
+							<a href="#CloudFront" class="link-title first"><h2 id="CloudFront">1.08 CloudFront<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								<p class="list-title">CloudFront in &lt;20 words:</p>
@@ -1016,13 +1026,135 @@
 									<sup><abbr title="https://aws.amazon.com/cloudfront/"><a href="https://aws.amazon.com/cloudfront/">[15]</a></abbr></sup>
 								</p>
 							</section>
+
+							<a href="#DynamoDB" class="link-title first"><h2 id="DynamoDB">1.09 DynamoDB<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">DynamoDB in &lt;20 words:</p>
+								<span class="important">NoSQL/non-relational; Partitions; Multi-AZ; Serverless</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of DynamoDB</p>
+								<p>
+									Amazon DynamoDB is a key-value and document database that delivers single-digit 
+									millisecond performance at any scale. It's a fully managed, multi-region, 
+									multi-active, durable database with built-in security, backup and restore, and 
+									in-memory caching for internet-scale applications. DynamoDB can handle more than 
+									10 trillion requests per day and can support peaks of more than 20 million 
+									requests per second.
+									<sup><abbr title="https://aws.amazon.com/dynamodb/"><a href="https://aws.amazon.com/dynamodb/">[16]</a></abbr></sup>
+								</p>
+								<p class="list-title">Additional Notes:</p>
+								<ul>
+									<li>
+										Point-In-Time-Recovery (PITR) allows you to restore your database to its prior 
+										state (up to the second) so long as the state was within the past 35 days. 
+										Backups can be saved for data archiving.
+									</li>
+									<li>
+										Used for shopping carts, customer preferences, content management, mobile 
+										applications, etc. 
+									</li>
+									<li>
+										Pay for what you use; no minimum capacity.
+									</li>
+									<li>
+										No charge for read/write, only for the storage and backups
+									</li>
+									<li>
+										Uses SSDs and paritioning into nodes in order to provide the incredible 
+										speed and efficiency that it does. 
+									</li>
+								</ul>
+							</section>
+
+							<a href="#Aurora" class="link-title first"><h2 id="Aurora">1.10 Aurora<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">Aurora in &lt;20 words:</p>
+								<span class="important">SQL/relational; fail-resilient; Faster; Cheaper</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of DynamoDB</p>
+								<p>
+									Amazon Aurora is a MySQL and PostgreSQL-compatible relational database 
+									built for the cloud, that combines the performance and availability of 
+									traditional enterprise databases with the simplicity and cost-effectiveness of 
+									open source databases.
+									<sup><abbr title="https://aws.amazon.com/rds/aurora"><a href="https://aws.amazon.com/rds/aurora">[17]</a></abbr></sup>
+								</p>
+								<p>
+									Amazon Aurora is up to five times faster than standard MySQL databases and 
+									three times faster than standard PostgreSQL databases. It provides the security, 
+									availability, and reliability of commercial databases at 1/10th the cost. Amazon 
+									Aurora is fully managed by Amazon Relational Database Service (RDS), which 
+									automates time-consuming administration tasks like hardware provisioning, database 
+									setup, patching, and backups.
+									<sup><abbr title="https://aws.amazon.com/rds/aurora"><a href="https://aws.amazon.com/rds/aurora">[17]</a></abbr></sup>
+								</p>
+								<p>
+									Amazon Aurora features a distributed, fault-tolerant, self-healing storage system 
+									that auto-scales up to 128TB per database instance. It delivers high performance 
+									and availability with up to 15 low-latency read replicas, point-in-time recovery, 
+									continuous backup to Amazon S3, and replication across three Availability Zones (AZs).
+									<sup><abbr title="https://aws.amazon.com/rds/aurora"><a href="https://aws.amazon.com/rds/aurora">[17]</a></abbr></sup>
+								</p>
+								<p class="list-title">Additional Notes:</p>
+								<ul>
+									<li>Get 5X the throughput of standard MySQL and 3X the throughput of standard PostgreSQL</li>
+									<li>Performance is on par with commercial databases, at 1/10th the cost</li>
+									<li>You can add up to 15 low latency read replicas across three Availability Zones</li>
+									<li>
+										Amazon Aurora is designed to offer greater than 99.99% availability, replicating 
+										6 copies of your data across 3 Availability Zones and backing up your data 
+										continuously to Amazon S3
+									</li>
+									<li>Instance failover typically takes less than 30 seconds</li>
+									<li>
+										You can also backtrack within seconds to a previous point in time, to recover 
+										from user errors
+									</li>
+									<li>Amazon Aurora is fully managed by Amazon Relational Database Service (RDS)</li>
+								</ul>
+							</section>
+
+							<a href="#RDS" class="link-title first"><h2 id="RDS">1.11 RDS<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								<p class="list-title">RDS in &lt;20 words:</p>
+								<span class="important">Snapshot; SQL DB Manager; Auto Scaling</span><br>
+								<!-- TODO: Add an analogy for what this service represents -->
+								<p class="list-title">Amazon's description of RDS</p>
+								<p>
+									Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, 
+									and scale a relational database in the cloud. It provides cost-efficient and 
+									resizable capacity while automating time-consuming administration tasks such as 
+									hardware provisioning, database setup, patching and backups. It frees you to 
+									focus on your applications so you can give them the fast performance, high 
+									availability, security and compatibility they need
+									<sup><abbr title="https://aws.amazon.com/rds/"><a href="https://aws.amazon.com/rds/">[18]</a></abbr></sup>
+								</p>
+								<p>
+									Amazon RDS is available on several database instance types - optimized for 
+									memory, performance or I/O - and provides you with six familiar database engines 
+									to choose from, including Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle 
+									Database, and SQL Server. You can use the AWS Database Migration Service to 
+									easily migrate or replicate your existing databases to Amazon RDS.
+									<sup><abbr title="https://aws.amazon.com/rds/"><a href="https://aws.amazon.com/rds/">[18]</a></abbr></sup>
+								</p>
+								<p class="list-title">Additional Notes:</p>
+								<ul>
+									<li>
+										Many Amazon RDS engine types allow you to launch one or more Read 
+										Replicas to offload read traffic from your primary database instance
+									</li>
+								</ul>
+							</section>
 						</section>
 
 						<!-- 2: Services In-Depth (every service will have its own quiz) -->
 						<section>
 							<h1>AWS Resources In-Depth</h1>
 							
-							<a href="#S3-in-depth" class="link-title first"><h2 id="S3-in-depth">2.1 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
+							<a href="#S3-in-depth" class="link-title first"><h2 id="S3-in-depth">2.01 Simple Storage Service (S3)<i class="fas fa-link link"></i></h2></a>
 							<section>
 								<hr style="transform:translate(0px, -8px)">
 								
@@ -1162,6 +1294,34 @@
 										<!-- Select a Question (for when state is kept ) -->
 								</table>	
 							</div>
+
+							<a href="#DynamoDB-in-depth" class="link-title first"><h2 id="DynamoDB-in-depth">2.02 DynamoDB<i class="fas fa-link link"></i></h2></a>
+							<section>
+								<hr style="transform:translate(0px, -8px)">
+								
+								<p class="list-title">Additional notes:</p>
+								<ul>
+									<li>
+										Supports virtually any size
+									</li>
+									<li>
+										Allows you to create full backups for data archiving
+									</li>
+									<li>
+										Encrypts data at rest using Key Management Service (KMS)
+									</li>
+									<li>
+										Due to the nature of NoSQL/non-relational data storage, it can handle 
+										unstructured data. However, it can easily become difficult to manage larger 
+										amount of data.
+									</li>
+									<li>
+										For transactions, two queries must operate successfully (validation query, 
+										committing query; verify sufficient balance and information, commit 
+										transaction).
+									</li>
+								</ul>
+							</section>
 						</section>
 					</td>
 				</tr>
