@@ -74,3 +74,16 @@ a.link-title{
 		color:#DDD;
 	}
 }
+
+.index-nextPageToggle{
+	&-right{
+		&:hover{
+			color:#DDD;
+		}
+	}
+	&-left{
+		&:hover{
+			color:#DDD;
+		}
+	}
+}

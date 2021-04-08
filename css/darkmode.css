@@ -75,4 +75,12 @@ table.standard > tbody > tr.header-row {
 a.link-title:hover > h2 > * {
   color: #DDD;
 }
+
+.index-nextPageToggle-right:hover {
+  color: #DDD;
+}
+
+.index-nextPageToggle-left:hover {
+  color: #DDD;
+}
 /*# sourceMappingURL=darkmode.css.map */
