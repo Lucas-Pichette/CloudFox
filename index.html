@@ -8,6 +8,7 @@
 	<meta name="description" content="Free AWS Education for the Aspiring">
 	<meta name="author" content="Lucas Pichette">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" id="mode" href="./css/darkmode.css">
 	<script defer src="./js/all.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
@@ -36,11 +37,11 @@
 						<h6 class="center-h">By <a href="https://github.com/Lucas-Pichette">Lucas Pichette</a></h6>
 						<h6 class="center-h" style="font-size:65%;width:40%;margin:auto;color:#888;">
 							<em>Due to frequent updates please clear cached site data 
-								<span style="color:#333;font-weight:bold;">
+								<span class="emphasis">
 									if visual errors occur
 								</span>
 								, or email them to me at: 
-								<a href="mailto:thecloudfox.lucas@gmail.com" style="color:#555;">thecloudfox.lucas@gmail.com</a>
+								<a href="mailto:thecloudfox.lucas@gmail.com" class="emphasis">thecloudfox.lucas@gmail.com</a>
 							</em>
 						</h6>
 					</div>
@@ -85,41 +86,65 @@
 					<!-- Index (non-mobile) -->
 					<td id="index-wrapper">
 						<div id="index">
-							<!-- Index Toggle -->
-							<div onclick="toggleIndex()" id="index-toggle">
-								<i id="hide-index" style="display:inline-block" class="fas fa-minus-square"></i>
-								<i id="show-index" style="display:none" class="fas fa-plus-square"></i>
+							<!-- Light/Dark Mode Toggle -->
+							<div class="modeToggleWrapper" onclick="togglemode()">
+								<i class="darkmodetogglebtn fas fa-moon" id="dmodebtndesktop" style="display:none;"></i>
+								<i class="lightmodetogglebtn fas fa-sun" id="lmodebtndesktop" style="display:inline-block;"></i>
+								<span id="modeTypeText" style="display:inline;margin-left:10px;">light mode</span>
 							</div>
-							<!-- The actual index -->
-							<div id="index-content" style="display:inline-block">
-								<b class="index-title">Index</b>
-								<b class="primary">Intro to AWS</b>
-								<ul>
-									<li><b>0.1&nbsp;</b> <a href="#What-is-AWS?">What is AWS?</a></li>
-									<li><b>0.2&nbsp;</b> <a href="#Demand-for-AWS-Experts?">The Demand for Experts</a></li>
-									<li><b>0.3&nbsp;</b> <a href="#Leadership-Principles">Leadership Principles</a></li>
-									<li><b>0.4&nbsp;</b> <a href="#Pillars-of-Well-Architected-Framework">The 5 Pillars</a></li>
-									<li><b>0.5&nbsp;</b> <a href="#AWS-Fundamentals-of-Pricing">AWS Fund. of Pricing</a></li>
-									<li><b>0.6&nbsp;</b> <a href="#AWS-Support-Plans">AWS Support Plans</a></li>
-									<li><b>0.7&nbsp;</b> <a href="#Fund-Terminology">Fund. Terminology</a></li>
-									<li><b>&nbsp;— &nbsp;</b> <a href="#Intro-to-AWS-Quiz">Chapter Quiz</a></li>
-								</ul>
-								<b class="primary">Fund. AWS Resources</b>
-								<ul>
-									<li><b>1.1&nbsp;</b> <a href="#S3">S3</a></li>
-									<li><b>1.2&nbsp;</b> <a href="#EC2">EC2</a></li>
-									<li><b>1.3&nbsp;</b> <a href="#IAM">IAM</a></li>
-									<li><b>1.4&nbsp;</b> <a href="#VPC">VPC</a></li>
-									<li><b>1.5&nbsp;</b> <a href="#Route53">Route53</a></li>
-									<li><b>1.6&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
-									<li><b>1.7&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
-									<li><b>1.8&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
-								</ul>
-								<b class="primary">AWS Resources In-Depth</b>
-								<ul>
-									<li><b>2.1&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
-								</ul>
+
+							<div style="border-top:2px solid #999;border-bottom:2px solid #999;padding-top:15px;height:60vh">
+								<!-- Index Toggle -->
+								<div onclick="toggleIndex()" id="index-toggle">
+									<i id="hide-index" style="display:inline-block" class="fas fa-minus-square"></i>
+									<i id="show-index" style="display:none" class="fas fa-plus-square"></i>
+								</div>
+
+								<!-- The actual index -->
+								<div id="index-content" style="display:inline-block">
+									<b class="index-title">Index</b>
+									<section id="idx-sec-1" style="display:block">
+										<b class="primary">Intro to AWS</b>
+										<ul>
+											<li><b>0.1&nbsp;</b> <a href="#What-is-AWS?">What is AWS?</a></li>
+											<li><b>0.2&nbsp;</b> <a href="#Demand-for-AWS-Experts?">The Demand for Experts</a></li>
+											<li><b>0.3&nbsp;</b> <a href="#Leadership-Principles">Leadership Principles</a></li>
+											<li><b>0.4&nbsp;</b> <a href="#Pillars-of-Well-Architected-Framework">The 5 Pillars</a></li>
+											<li><b>0.5&nbsp;</b> <a href="#AWS-Fundamentals-of-Pricing">AWS Fund. of Pricing</a></li>
+											<li><b>0.6&nbsp;</b> <a href="#AWS-Support-Plans">AWS Support Plans</a></li>
+											<li><b>0.7&nbsp;</b> <a href="#Fund-Terminology">Fund. Terminology</a></li>
+											<li><b>&nbsp;— &nbsp;</b> <a href="#Intro-to-AWS-Quiz">Chapter Quiz</a></li>
+										</ul>
+									</section>
+									
+									<section id="idx-sec-2" style="display:none">
+										<b class="primary">Fund. AWS Resources</b>
+										<ul>
+											<li><b>1.1&nbsp;</b> <a href="#S3">S3</a></li>
+											<li><b>1.2&nbsp;</b> <a href="#EC2">EC2</a></li>
+											<li><b>1.3&nbsp;</b> <a href="#IAM">IAM</a></li>
+											<li><b>1.4&nbsp;</b> <a href="#VPC">VPC</a></li>
+											<li><b>1.5&nbsp;</b> <a href="#Route53">Route53</a></li>
+											<li><b>1.6&nbsp;</b> <a href="#CloudWatch">CloudWatch</a></li>
+											<li><b>1.7&nbsp;</b> <a href="#CloudTrail">CloudTrail</a></li>
+											<li><b>1.8&nbsp;</b> <a href="#CloudFront">CloudFront</a></li>
+										</ul>
+									</section>
+									
+									<section id="idx-sec-3" style="display:none">
+										<b class="primary">AWS Resources In-Depth</b>
+										<ul>
+											<li><b>2.1&nbsp;</b> <a href="#S3-in-depth">S3</a></li>
+										</ul>
+									</section>
+									
+									<div style="position:absolute;top:calc(60vh + 15px);right:0;font-size:20px;">
+										<i class="fas fa-arrow-right index-nextPageToggle-right" onclick="nextpage()"></i>
+										<i class="fas fa-arrow-left index-nextPageToggle-left" onclick="previouspage()"></i>
+									</div>
+								</div>
 							</div>
+							
 						</div>
 					</td>
 					<!-- Book -->
@@ -715,7 +740,7 @@
 															</div>
 														</td>
 														<td id="check-btn-box" class="quiz-check-btn" onclick="checkAnswer(0)" onmouseover="chkBtnHighlight(0)" onmouseout="chkBtnUnhighlight(0)">
-															<i id="check-btn" class="fas fa-check" style="color:rgb(0, 58, 0)"></i>
+															<i id="check-btn" class="fas fa-check" style="color:rgb(6, 107, 6)"></i>
 														</td>
 													</tr>
 												</table>

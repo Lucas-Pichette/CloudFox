@@ -1,0 +1,78 @@
+html, body {
+  background-color: #222;
+  color: #DDD;
+}
+
+p, a, li {
+  color: #DDD;
+}
+
+.emphasis {
+  color: #DDD;
+  font-weight: bold;
+}
+
+.important {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(61, 74, 255, 0.329)), to(rgba(255, 171, 60, 0.329))) no-repeat -5px 9px;
+  background: linear-gradient(to left, rgba(61, 74, 255, 0.329), rgba(255, 171, 60, 0.329)) no-repeat -5px 9px;
+}
+
+.primary {
+  color: #6a6aff;
+}
+
+#index-toggle {
+  color: #666;
+}
+
+#index-toggle:hover {
+  color: #DDD;
+}
+
+.modeToggleWrapper:hover {
+  color: #DDD;
+}
+
+table.standard > tbody > tr:nth-child(even) {
+  background-color: #DDD;
+  color: #333;
+}
+
+table.standard > tbody > tr:nth-child(odd) {
+  background-color: transparent;
+  color: #EEE;
+}
+
+table.standard > tbody > tr.header-row {
+  background-color: #333;
+  color: #EEE;
+}
+
+.quiz-display > .status-btn {
+  color: #be0001;
+}
+
+.quiz-display > .status-btn:hover {
+  color: #ff4243;
+}
+
+.change-page-btn-left {
+  color: #6900cc;
+}
+
+.change-page-btn-left:hover {
+  color: #992cff;
+}
+
+.change-page-btn-right {
+  color: #6900cc;
+}
+
+.change-page-btn-right:hover {
+  color: #992cff;
+}
+
+a.link-title:hover > h2 > * {
+  color: #DDD;
+}
+/*# sourceMappingURL=darkmode.css.map */

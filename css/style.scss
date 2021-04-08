@@ -218,6 +218,11 @@ a.img-link{
 	}
 }
 
+.emphasis{
+	color:#333;
+	font-weight:bold;
+}
+
 .important {
 	display:inline-block;
 	margin-bottom:15px;
@@ -287,7 +292,7 @@ table.quiz-table{
 	}
 }
 
-#index-content > ul {
+#index-content > section > ul {
 	margin-top:3px;
 	margin-bottom:10px;
 }
@@ -316,10 +321,29 @@ table.quiz-table{
 	padding:0;
 	margin:0;
 
-	& > *{
+	& > * > *{
 		display:block;
 		list-style: none;
 		padding-left:0;
+	}
+}
+
+.index-nextPageToggle{
+	&-right{
+		float:right;
+		padding-left:20px;
+		color:#999;
+		&:hover{
+			color:#DDD;
+		}
+	}
+	&-left{
+		float:left;
+		padding-right:20px;
+		color:#999;
+		&:hover{
+			color:#DDD;
+		}
 	}
 }
 
@@ -337,6 +361,7 @@ b.index-title {
 	/*needs to have same height and width as actual button*/
 	width:20px;
 	height:36px;
+	line-height:20px;
 	display:block;
 
 	/* Same height as welcome-splash + height/font-size of h1*/
@@ -410,6 +435,18 @@ b.index-title {
 		margin:auto;
 		margin-top:30px;
 		margin-left:20px;
+	}
+}
+
+.modeToggleWrapper{
+	text-align:center;
+	margin-bottom:10px;
+	display:block;
+	user-select:none;
+	cursor:pointer;
+	color:#999;
+	&:hover{
+		color: #333;
 	}
 }
 

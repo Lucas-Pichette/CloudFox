@@ -342,6 +342,11 @@ a.img-link > img:hover {
   text-align: center;
 }
 
+.emphasis {
+  color: #333;
+  font-weight: bold;
+}
+
 .important {
   display: inline-block;
   margin-bottom: 15px;
@@ -419,7 +424,7 @@ table.quiz-table > tbody > tr {
   color: rgba(51, 51, 51, 0.514);
 }
 
-#index-content > ul {
+#index-content > section > ul {
   margin-top: 3px;
   margin-bottom: 10px;
 }
@@ -448,10 +453,30 @@ table.quiz-table > tbody > tr {
   margin: 0;
 }
 
-#index-content > * {
+#index-content > * > * {
   display: block;
   list-style: none;
   padding-left: 0;
+}
+
+.index-nextPageToggle-right {
+  float: right;
+  padding-left: 20px;
+  color: #999;
+}
+
+.index-nextPageToggle-right:hover {
+  color: #DDD;
+}
+
+.index-nextPageToggle-left {
+  float: left;
+  padding-right: 20px;
+  color: #999;
+}
+
+.index-nextPageToggle-left:hover {
+  color: #DDD;
 }
 
 b.index-title {
@@ -467,6 +492,7 @@ b.index-title {
   /*needs to have same height and width as actual button*/
   width: 20px;
   height: 36px;
+  line-height: 20px;
   display: block;
   /* Same height as welcome-splash + height/font-size of h1*/
   /* 400px + 28px*/
@@ -548,6 +574,22 @@ b.index-title {
     margin-top: 30px;
     margin-left: 20px;
   }
+}
+
+.modeToggleWrapper {
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.modeToggleWrapper:hover {
+  color: #333;
 }
 
 #book {

@@ -84,6 +84,18 @@ const questions = [
 			"ansid": [
 				4
 			]
+		},
+		{
+			"question": "If an application recently receives and unexpected amount of traffic which results in an auto scaling group modifying the amount of existing ec2 instances, what is this an example of?",
+			"options": [
+				"Resources",
+				"Reliability",
+				"Elasticity",
+				"Scalability"
+			],
+			"ansid": [
+				3
+			]
 		}
 	],
 	[
@@ -113,6 +125,29 @@ const questions = [
 		}
 	]
 ];
+
+let currentMode = "dark";
+function togglemode(){
+	const mode = document.getElementById("mode");
+	const lightbtn = document.getElementById("lmodebtndesktop");
+	const darkbtn = document.getElementById("dmodebtndesktop");
+	const modetxt = document.getElementById("modeTypeText");
+	// If light mode, and button was clicked, switch to dark mode.
+	if (currentMode != "dark") {
+		currentMode = "dark";
+		mode.href = "./css/darkmode.css";
+		darkbtn.style.display = "none";
+		lightbtn.style.display = "inline-block";
+		modetxt.innerHTML = "light mode";
+	} else{
+		currentMode = "light";
+		mode.href = "";
+		darkbtn.style.display = "inline-block";
+		lightbtn.style.display = "none";
+		modetxt.innerHTML = "dark mode";
+	}
+	
+}
 
 /* Going to load in questions for the quiz the same order every time.*/
 function loadQuiz(chapter){
@@ -234,7 +269,7 @@ function selectOption(chapter, option){
 
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(0, 58, 0)";
+		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
 		document.getElementById("check-btn-box").style.boxShadow = "";
 	}
@@ -277,7 +312,7 @@ function changeQuestion(chapter, changeby){
 
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(0, 58, 0)";
+		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
 		document.getElementById("check-btn-box").style.boxShadow = "";
 	}
@@ -295,12 +330,42 @@ function chkBtnHighlight(chapter){
 }
 
 function chkBtnUnhighlight(chapter){
-	document.getElementById("check-btn").style.color = "rgb(0, 58, 0)";
+	document.getElementById("check-btn").style.color = "rgb(6, 107, 6)";
 	
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(0, 58, 0)";
+		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
 		document.getElementById("check-btn-box").style.boxShadow = "";
 	}
+}
+
+let currentpage = 1;
+let maxpage = 3;
+function nextpage(){
+	const currentPage = document.getElementById("idx-sec-"+currentpage);
+	if (currentpage == maxpage){
+		currentpage = 1;
+	} else{
+		currentpage++;
+	}
+	
+	const nextPage = document.getElementById("idx-sec-"+currentpage);
+
+	currentPage.style.display = "none";
+	nextPage.style.display = "block";
+}
+
+function previouspage(){
+	const currentPage = document.getElementById("idx-sec-"+currentpage);
+	if(currentpage == 1){
+		currentpage = maxpage;
+	} else{
+		currentpage--;
+	}
+	
+	const prevPage = document.getElementById("idx-sec-"+currentpage);
+
+	currentPage.style.display = "none";
+	prevPage.style.display = "block";
 }
