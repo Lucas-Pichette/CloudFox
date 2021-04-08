@@ -460,18 +460,20 @@ table.quiz-table > tbody > tr {
 }
 
 .index-nextPageToggle-right {
+  cursor: pointer;
   float: right;
-  padding-left: 20px;
+  margin-left: 20px;
   color: #999;
 }
 
 .index-nextPageToggle-right:hover {
-  color: #DDD;
+  color: #333;
 }
 
 .index-nextPageToggle-left {
+  cursor: pointer;
   float: left;
-  padding-right: 20px;
+  margin-right: 20px;
   color: #999;
 }
 

@@ -1,6 +1,4 @@
-window.onload = (event) => {
-	
-};
+
 
 function toggleIndex(){
 	console.log("Toggling visibility of index");
@@ -342,6 +340,11 @@ function chkBtnUnhighlight(chapter){
 
 let currentpage = 1;
 let maxpage = 3;
+
+window.onload = (event) => {
+	document.getElementById("maxpage").innerHTML = maxpage;
+};
+
 function nextpage(){
 	const currentPage = document.getElementById("idx-sec-"+currentpage);
 	if (currentpage == maxpage){
@@ -349,6 +352,7 @@ function nextpage(){
 	} else{
 		currentpage++;
 	}
+	document.getElementById("currentpage").innerHTML = currentpage;
 	
 	const nextPage = document.getElementById("idx-sec-"+currentpage);
 
@@ -363,6 +367,7 @@ function previouspage(){
 	} else{
 		currentpage--;
 	}
+	document.getElementById("currentpage").innerHTML = currentpage;
 	
 	const prevPage = document.getElementById("idx-sec-"+currentpage);
 
