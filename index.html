@@ -93,7 +93,7 @@
 								<span id="modeTypeText" style="display:inline;margin-left:10px;">light mode</span>
 							</div>
 
-							<div style="border-top:2px solid #999;border-bottom:2px solid #999;padding-top:15px;height:60vh">
+							<div id="indexSubWrapper" style="border-top:2px solid #999;border-bottom:2px solid #999;padding-top:15px;height:60vh">
 								<!-- Index Toggle -->
 								<div onclick="toggleIndex()" id="index-toggle">
 									<i id="hide-index" style="display:inline-block" class="fas fa-minus-square"></i>
@@ -686,7 +686,7 @@
 										<!-- Question -->
 										<tr id="c0-qr" class="question-row" style="filter:blur(4px);">
 											<td>
-												<div id="Q-icon">Q<span id="q-title-num">1</span></div>
+												<div id="Q-icon">Q<span id="q-title-num-0">1</span></div>
 												<p id="c0-q" class="question">Question</p>
 											</td>
 										</tr>
@@ -742,8 +742,8 @@
 																START QUIZ
 															</div>
 														</td>
-														<td id="check-btn-box" class="quiz-check-btn" onclick="checkAnswer(0)" onmouseover="chkBtnHighlight(0)" onmouseout="chkBtnUnhighlight(0)">
-															<i id="check-btn" class="fas fa-check" style="color:rgb(6, 107, 6)"></i>
+														<td id="check-btn-box-0" class="quiz-check-btn" onclick="checkAnswer(0)" onmouseover="chkBtnHighlight(0)" onmouseout="chkBtnUnhighlight(0)">
+															<i id="check-btn-0" class="fas fa-check" style="color:rgb(6, 107, 6)"></i>
 														</td>
 													</tr>
 												</table>
@@ -1011,7 +1011,7 @@
 							</section>
 						</section>
 
-						<!-- 2: Services In-Depth -->
+						<!-- 2: Services In-Depth (every service will have its own quiz) -->
 						<section>
 							<h1>AWS Resources In-Depth</h1>
 							
@@ -1081,90 +1081,78 @@
 								<p class="list-title">NOT suitable to host on operating system on</p>
 								<p class="list-title">Bucket names are universal (globally unique)</p>
 							</section>
-						</section>
-
-						<!-- (-1): EXAMPLE SECTION (doesn't show up)-->
-						<section style="display:none">
-							<h1>About Examples</h1>
-							<h2 id="Example!">Example!</h2>
-							<p>This is <span class="important sketch-highlight">important</span> yo</p>
-							<div class="code">
-								<ol>
-									<li><span class="f">myfunction</span>();</li>
-									<li><span class="t">int</span> myvar <span class="o">=</span> <span class="n">7</span>;</li>
-								</ol>
-							</div>
-							<p>This is <span class="important sketch-highlight">important</span> yo</p>
+							
+							<!-- When we add quizzes for other services just treat it as a new chapter-->
 							<div class="quiz">
+								<a href="#S3-Quiz" class="link-title first"><h2 id="S3-Quiz">S3 Quiz<i class="fas fa-link link"></i></h2></a>
 								<table>
-									<tbody>
 										<!-- Question -->
-										<tr id="c0-qr" class="question-row" style="filter:blur(4px)">
+										<tr id="c2-qr" class="question-row" style="filter:blur(4px);">
 											<td>
-												<div id="Q-icon">Q<span id="q-title-num"></span></div>
-												<p id="c0-q" class="question">Question</p>
+												<div id="Q-icon">Q<span id="q-title-num-2">1</span></div>
+												<p id="c2-q" class="question">Question</p>
 											</td>
 										</tr>
 										<!-- Options -->
-										<tr id="c0-or" class="options-row" style="filter:blur(4px)">
+										<tr id="c2-or" class="options-row" style="filter:blur(4px);">
 											<td>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
-														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													<div class="userSelectQ-wrapper" onclick="selectOption(2,1)">
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c2-o1-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
-													<p id="c0-o1" class="option">Option</p>
+													<p id="c2-o1" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
-														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													<div class="userSelectQ-wrapper" onclick="selectOption(2,2)">
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c2-o2-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
-													<p id="c0-o2" class="option">Option</p>
+													<p id="c2-o2" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
-														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													<div class="userSelectQ-wrapper" onclick="selectOption(2,3)">
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c2-o3-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
-													<p id="c0-o3" class="option">Option</p>
+													<p id="c2-o3" class="option">Option</p>
 												</div>
 												<div class="option-wrapper">
-													<div class="userSelectQ-wrapper">
-														<i class="fas fa-square userSelectQ"></i>
-														<i class="fas fa-times userSelectQ-check" style="display:none;color:white"></i>
+													<div class="userSelectQ-wrapper" onclick="selectOption(2,4)">
+														<i class="far fa-square userSelectQ"></i>
+														<i id="c2-o4-c" class="fas fa-times userSelectQ-check" style="display:none;"></i>
 													</div>
-													<p id="c0-o4" class="option">Option</p>
+													<p id="c2-o4" class="option">Option</p>
 												</div>
 											</td>
 										</tr>
 										<!-- Buttons (prev, refresh, next ... check)-->
 										<tr class="buttons-row">
 											<td>
-												<table>
+												<table class="quiz-table">
 													<tr>
 														<td class="quiz-btns">
-															<div class="change-page-btn-left">
+															<div class="change-page-btn-left" onclick="changeQuestion(2,-1)">
 																<i class="fas fa-arrow-left"></i>
 															</div>
 															
-															<div class="change-page-btn-right">
+															<div class="change-page-btn-right" onclick="changeQuestion(2,1)">
 																<i class="fas fa-arrow-right"></i>
 															</div>
 														</td>
 														<td class="quiz-display">
-															<div id="c0-sb" class="status-btn" onclick="loadQuiz(0)">
-																START
+															<div id="c2-sb" class="status-btn" onclick="loadQuiz(2)" style="cursor:pointer">
+																START QUIZ
 															</div>
 														</td>
-														<td class="quiz-check-btn" onclick="checkAnswer(0)">
-															<i class="fas fa-check check-btn"></i>
+														<td id="check-btn-box-2" class="quiz-check-btn" onclick="checkAnswer(2)" onmouseover="chkBtnHighlight(2)" onmouseout="chkBtnUnhighlight(2)">
+															<i id="check-btn-2" class="fas fa-check" style="color:rgb(6, 107, 6)"></i>
 														</td>
 													</tr>
 												</table>
 											</td>
 										</tr>
-									</tbody>
+										<!-- Select a Question (for when state is kept ) -->
 								</table>	
 							</div>
 						</section>

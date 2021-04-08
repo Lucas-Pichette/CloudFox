@@ -719,16 +719,18 @@ b.index-title {
   padding: 0;
 }
 
-#q-title-num {
+#Q-icon > span {
   font-size: 12px;
 }
 
 .question-row {
-  height: 25%;
+  height: 40%;
   vertical-align: top;
 }
 
 .question-row > * {
+  width: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -778,7 +780,7 @@ b.index-title {
     width: 350px;
     height: 40px;
   }
-  .buttons-row > td > table > tbody > tr > td#check-btn-box {
+  .buttons-row > td > table > tbody > tr > td.quiz-check-btn {
     width: 250px;
     height: 40px;
   }
@@ -824,6 +826,7 @@ b.index-title {
           user-select: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 #Q-icon {

@@ -11,10 +11,14 @@ function toggleIndex(){
 		indexContent.style.display = "inline-block";
 		showBtn.style.display = "none";
 		hideBtn.style.display = "inline-block";
+		document.getElementById("indexSubWrapper").style.borderBottom = "2px solid #999";
+		document.getElementById("indexSubWrapper").style.borderTop = "2px solid #999";
 	} else{
 		indexContent.style.display = "none";
 		showBtn.style.display = "inline-block";
 		hideBtn.style.display = "none";
+		document.getElementById("indexSubWrapper").style.borderBottom = "";
+		document.getElementById("indexSubWrapper").style.borderTop = "";
 	}
 }
 
@@ -98,24 +102,126 @@ const questions = [
 	],
 	[
 		{
-			"question": "question 0",
+			"question": "question 0 for chapter 1",
 			"options": [
-				"o1 for q0",
-				"o2 for q0",
-				"o3 for q0",
-				"o4 for q0"
+				"o1",
+				"o2",
+				"o3",
+				"o4"
+			],
+			"ansid": [
+				1
+			]
+		}
+	],
+	[
+		{
+			"question": "How large can an individual file in S3 be?",
+			"options": [
+				"5TB",
+				"500GB",
+				"50GB",
+				"5GB"
 			],
 			"ansid": [
 				1
 			]
 		},
 		{
-			"question": "question 1",
+			"question": "Which storage class <u>doesn't</u> offer 11 9's durability?",
 			"options": [
-				"o1 for q1",
-				"o2 for q2",
-				"o3 for q2",
-				"o4 for q2"
+				"One Zone - IA",
+				"Glacier",
+				"Glacier Deep Archive",
+				"Reduced Redundancy Storage (RRS)"
+			],
+			"ansid": [
+				4
+			]
+		},
+		{
+			"question": "What does Amazon do with my data in S3?",
+			"options": [
+				"Stores and tracks your data for billing purposes",
+				"Won't ever access your data",
+				"Will access your data when required to by law",
+				"Archives all stored data for 32 months"
+			],
+			"ansid": [
+				1,
+				3
+			]
+		},
+		{
+			"question": "What type of storage is S3?",
+			"options": [
+				"Block storage",
+				"Object storage",
+				"File storage",
+				"Circular storage"
+			],
+			"ansid": [
+				2
+			]
+		},
+		{
+			"question": "Can I use lambda to make calls to S3?",
+			"options": [
+				"Yes",
+				"Only if the needed roles and policies are correctly configured and applied",
+				"No",
+				"Yes, but only on every third blue moon"
+			],
+			"ansid": [
+				2
+			]
+		},
+		{
+			"question": "How many buckets can an AWS account have?",
+			"options": [
+				"Unlimited",
+				"Soft limit of 20 that can be increased by contacting AWS Support",
+				"Soft limit of 100 that can be increased with AWS Service Quotas",
+				"Hard limit of 100"
+			],
+			"ansid": [
+				3
+			]
+		},
+		{
+			"question": "What options are available for encrypting data on S3?",
+			"options": [
+				"SSE-KMS",
+				"SSE-C",
+				"SSE-S3",
+				"Client Library (data encrypted prior to being placed in S3)"
+			],
+			"ansid": [
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"question": "What does the 11 9's refer to?",
+			"options": [
+				"Availability",
+				"Elasticity",
+				"Durability",
+				"Resilience"
+			],
+			"ansid": [
+				3
+			]
+		},
+		{
+			"question": "Does S3 support redirects?",
+			"options": [
+				"Yes",
+				"No",
+				"Only for websites",
+				"Only for individual objects"
 			],
 			"ansid": [
 				1
@@ -149,7 +255,7 @@ function togglemode(){
 
 /* Going to load in questions for the quiz the same order every time.*/
 function loadQuiz(chapter){
-	const qsub_q = document.getElementById("q-title-num");
+	const qsub_q = document.getElementById("q-title-num-"+chapter);
 	qsub_q.innerHTML = 1;
 
 	const qrow = document.getElementById("c"+chapter+"-qr");
@@ -172,7 +278,7 @@ function loadQuiz(chapter){
 }
 
 function isAnOptionChecked(chapter){
-	const question = parseInt(document.getElementById("q-title-num").innerHTML) - 1;
+	const question = parseInt(document.getElementById("q-title-num-"+chapter).innerHTML) - 1;
 	const options = questions[chapter][question].options;
 	for(var i = 1; i < options.length+1; i++){
 		if(document.getElementById("c"+chapter+"-o"+i+"-c").style.display != "none"){
@@ -183,7 +289,7 @@ function isAnOptionChecked(chapter){
 }
 
 function checkAnswer(chapter){
-	const question = parseInt(document.getElementById("q-title-num").innerHTML) - 1;
+	const question = parseInt(document.getElementById("q-title-num-"+chapter).innerHTML) - 1;
 	const options = questions[chapter][question].options;
 	const optionRow = document.getElementById("c"+chapter+"-or");
 	if(optionRow.style.filter == "blur(4px)"){
@@ -253,7 +359,7 @@ function checkAnswer(chapter){
 
 function selectOption(chapter, option){
 	const optionRow = document.getElementById("c"+chapter+"-or");
-	const question = parseInt(document.getElementById("q-title-num").innerHTML) - 1;
+	const question = parseInt(document.getElementById("q-title-num-"+chapter).innerHTML) - 1;
 	if(optionRow.style.filter == "blur(4px)"){
 		return;
 	}
@@ -267,9 +373,9 @@ function selectOption(chapter, option){
 
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
-		document.getElementById("check-btn-box").style.boxShadow = "";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "";
 	}
 }
 
@@ -278,7 +384,7 @@ function changeQuestion(chapter, changeby){
 	statusBtn.innerHTML = "Waiting...";
 	statusBtn.style.color= "grey";
 
-	const qsub_q = document.getElementById("q-title-num");
+	const qsub_q = document.getElementById("q-title-num-"+chapter);
 	let qsub_q_val = parseInt(qsub_q.innerHTML)+changeby;
 	const num_qs_for_chapter = questions[chapter].length + 1;
 	// qsub_q_val is incorrect if 0 or length total q's
@@ -310,31 +416,31 @@ function changeQuestion(chapter, changeby){
 
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
-		document.getElementById("check-btn-box").style.boxShadow = "";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "";
 	}
 }
 
 function chkBtnHighlight(chapter){
-	document.getElementById("check-btn").style.color = "rgb(0,150,0)";
+	document.getElementById("check-btn-"+chapter).style.color = "rgb(0,150,0)";
 
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(0,150,0)";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "0 0 5px rgb(0,150,0)";
 	} else{
-		document.getElementById("check-btn-box").style.boxShadow = "";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "";
 	}
 }
 
 function chkBtnUnhighlight(chapter){
-	document.getElementById("check-btn").style.color = "rgb(6, 107, 6)";
+	document.getElementById("check-btn-"+chapter).style.color = "rgb(6, 107, 6)";
 	
 	let optionIsChecked = isAnOptionChecked(chapter);
 	if(optionIsChecked){
-		document.getElementById("check-btn-box").style.boxShadow = "0 0 5px rgb(6, 107, 6)";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "0 0 5px rgb(6, 107, 6)";
 	} else{
-		document.getElementById("check-btn-box").style.boxShadow = "";
+		document.getElementById("check-btn-box-"+chapter).style.boxShadow = "";
 	}
 }
 
